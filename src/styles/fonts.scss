@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Gilroy-Bold';
+  src: url('@/assets/fonts/Gilroy-Bold.ttf') format('truetype');
+  font-weight: 700; /* Correct weight for Bold */
+}
+
+@font-face {
+  font-family: 'Gilroy-Medium';
+  src: url('@/assets/fonts/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-Reg';
+  src: url('@/assets/fonts/Gilroy-Regular.ttf') format('truetype');
+  font-weight: 400; /* Correct weight for Regular */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-SemiBold';
+  src: url('@/assets/fonts/Gilroy-SemiBold.ttf') format('truetype');
+  font-weight: 600; /* Correct weight for SemiBold */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-Thin';
+  src: url('@/assets/fonts/Gilroy-Thin.ttf') format('truetype');
+  font-weight: 100; /* Correct weight for Thin */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gilroy-UltraLight';
+  src: url('@/assets/fonts/Gilroy-UltraLight.ttf') format('truetype');
+  font-weight: 200; /* Correct weight for UltraLight */
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy-H';
+  src: url('@/assets/fonts/Gilroy-Heavy.ttf') format('truetype');
+  font-weight: 400; /* Correct weight for UltraLight */
+  font-style: normal;
+}

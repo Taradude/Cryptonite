@@ -1,17 +1,22 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+    <CourseComponentCard
+      topText="УРОК 1"
+      bottomText="Система Без Зусиль: що це і як вона допоможе тобі
+досягти успіху на крипторинку. Вступний урок."
+      :leftImage="require('@/assets/img/l_main.png')"
+      :rightImage="require('@/assets/img/l1.png')"
+    />
   </div>
 </template>
 
 <script lang="ts">
-import { Options, Vue } from "vue-class-component";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import { Options, Vue } from 'vue-class-component'
+import CourseComponentCard from '@/components/CourseComponentCard.vue'
 
 @Options({
   components: {
-    HelloWorld,
+    CourseComponentCard,
   },
 })
 export default class HomeView extends Vue {}

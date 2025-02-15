@@ -1,0 +1,18 @@
+@import './fonts.scss';
+@import '@/styles/text.scss'; // (додатково, якщо у вас є змінні)
+// @import '@/styles/colors.scss'; // (додатково, якщо є міксини)
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Gilroy', sans-serif;
+  background-color: #f5f5f5;
+}

@@ -1,0 +1,25 @@
+// src/styles/_text.scss
+
+// Міксини для шрифтів
+@mixin text-style($font-size, $font-weight, $line-height: 1.6) {
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+// Глобальні стилі для тексту
+$h1-size: clamp(2rem, 5vw, 3rem);
+$h2-size: clamp(1.2rem, 3vw, 2rem);
+$p-size: clamp(2rem, 2vw, 1rem);
+
+h1 {
+  @include text-style($h1-size, 700);
+}
+
+h2 {
+  @include text-style($h2-size, 600);
+}
+
+p {
+  @include text-style($p-size, 200);
+}
