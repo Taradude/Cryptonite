@@ -13,13 +13,10 @@
 
 html {
   scroll-behavior: smooth;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 body {
   background-color: $bg-color;
-  max-width: 1000px;
+  // max-width: 1100px;
 }
 </style>

@@ -1,46 +1,218 @@
 <template>
+  <h1>ПРОГРАМА МІНІКУРСУ</h1>
   <div class="container">
     <!-- Верхній блок з текстом -->
     <div class="top-section">
       <div class="yellow-box">
-        <p class="text-content">{{ topText }}</p>
+        <p class="text-content">УРОК 1</p>
       </div>
-      <p class="bottom-text">{{ bottomText }}</p>
+      <p class="bottom-text">
+        Система Без Зусиль: що це і як вона допоможе тобі досягти успіху на крипторинку. Вступний урок.
+      </p>
     </div>
 
     <!-- Блок з двома фото -->
     <div class="image-section">
       <div class="left-image">
-        <img :src="leftImage" alt="Left Image" />
+        <img src="@/assets/img/l_main.png" alt="Left Image" />
       </div>
       <div class="right-image">
-        <img :src="rightImage" alt="Right Image" />
+        <img src="@/assets/img/l1.png" alt="Right Image" />
       </div>
+    </div>
+  </div>
+  <div class="container">
+    <!-- Верхній блок з текстом -->
+    <div class="top-section">
+      <div class="yellow-box">
+        <p class="text-content">УРОК 2</p>
+      </div>
+      <p class="bottom-text">Трейдинг та інвестиції: як усе влаштовано? Вся правда про ринок!</p>
+    </div>
+
+    <!-- Блок з двома фото -->
+    <div class="image-section">
+      <div class="left-image">
+        <img src="@/assets/img/l_main.png" alt="Left Image" />
+      </div>
+      <div class="right-image">
+        <img src="@/assets/img/l2.png" alt="Right Image" />
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <!-- Верхній блок з текстом -->
+    <div class="top-section">
+      <div class="yellow-box">
+        <p class="text-content">УРОК 3</p>
+      </div>
+      <p class="bottom-text">Цикли ринку: коли купувати, коли продавати і як не втрачати гроші</p>
+    </div>
+
+    <!-- Блок з двома фото -->
+    <div class="image-section">
+      <div class="left-image">
+        <img src="@/assets/img/l_main.png" alt="Left Image" />
+      </div>
+      <div class="right-image">
+        <img src="@/assets/img/l3.png" alt="Right Image" />
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <!-- Верхній блок з текстом -->
+    <div class="top-section">
+      <div class="yellow-box">
+        <p class="text-content">УРОК 4</p>
+      </div>
+      <p class="bottom-text">Формула зростання капіталу: як складний відсоток створює багатство</p>
+    </div>
+
+    <!-- Блок з двома фото -->
+    <div class="image-section">
+      <div class="left-image">
+        <img src="@/assets/img/l_main.png" alt="Left Image" />
+      </div>
+      <div class="right-image">
+        <img src="@/assets/img/l4.png" alt="Right Image" />
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <!-- Верхній блок з текстом -->
+    <div class="top-section">
+      <div class="yellow-box">
+        <p class="text-content">УРОК 5</p>
+      </div>
+      <p class="bottom-text">Розумний крипто-портфель: як збалансувати ризики та прибуток</p>
+    </div>
+
+    <!-- Блок з двома фото -->
+    <div class="image-section">
+      <div class="left-image">
+        <img src="@/assets/img/l_main.png" alt="Left Image" />
+      </div>
+      <div class="right-image">
+        <img src="@/assets/img/l5.png" alt="Right Image" />
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <!-- Верхній блок з текстом -->
+    <div class="top-section">
+      <div class="yellow-box">
+        <p class="text-content">УРОК 6</p>
+      </div>
+      <p class="bottom-text">Як читати ринок за допомогою індикаторів: точка входу та виходу</p>
+    </div>
+
+    <!-- Блок з двома фото -->
+    <div class="image-section">
+      <div class="left-image">
+        <img src="@/assets/img/l_main.png" alt="Left Image" />
+      </div>
+      <div class="right-image">
+        <img src="@/assets/img/l6.png" alt="Right Image" />
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <!-- Верхній блок з текстом -->
+    <div class="top-section">
+      <div class="yellow-box">
+        <p class="text-content">БОНУС</p>
+      </div>
+      <p class="bottom-text">Як читати ринок за допомогою індикаторів: точка входу та виходу</p>
+    </div>
+
+    <!-- Блок з двома фото -->
+    <div class="image-section">
+      <div class="left-image">
+        <img src="@/assets/img/l_main.png" alt="Left Image" />
+      </div>
+      <div class="right-image">
+        <img src="@/assets/img/bonus.png" alt="Right Image" />
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <!-- Верхній блок з текстом -->
+    <div class="top-section">
+      <div class="yellow-box">
+        <p class="text-content">БОНУС</p>
+      </div>
+      <p class="bottom-text">Біржі для трейдингу та інвестування: як обрати найкращу для себе</p>
+    </div>
+
+    <!-- Блок з двома фото -->
+    <div class="image-section">
+      <div class="right-image"></div>
+    </div>
+  </div>
+  <div class="container">
+    <!-- Верхній блок з текстом -->
+    <div class="top-section">
+      <div class="yellow-box">
+        <p class="text-content">БОНУС</p>
+      </div>
+      <p class="bottom-text">Подарунок: 3 професійні індикатори від сryptonite – доступ на 1 рік</p>
+    </div>
+
+    <!-- Блок з двома фото -->
+    <div class="image-section">
+      <div class="right-image"></div>
+    </div>
+  </div>
+  <div class="container">
+    <!-- Верхній блок з текстом -->
+    <div class="top-section">
+      <div class="yellow-box">
+        <p class="text-content">БОНУС</p>
+      </div>
+      <p class="bottom-text">TradingView для новачків і профі: як налаштувати платформу під себе</p>
+    </div>
+
+    <!-- Блок з двома фото -->
+    <div class="image-section">
+      <div class="right-image"></div>
+    </div>
+  </div>
+  <div class="container">
+    <!-- Верхній блок з текстом -->
+    <div class="top-section">
+      <div class="yellow-box">
+        <p class="text-content">БОНУС</p>
+      </div>
+      <p class="bottom-text">Розбір кейсів учасників Cryptonite Prime: реальні історії та цінний досвід</p>
+    </div>
+
+    <!-- Блок з двома фото -->
+    <div class="image-section">
+      <div class="right-image"></div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  props: {
-    topText: String,
-    bottomText: String,
-    leftImage: String,
-    rightImage: String,
-  },
-}
-</script>
+<script></script>
 
 <style scoped lang="scss">
+h1 {
+  color: $text-grey;
+  font-family: 'Gilroy-Bold';
+  text-align: center;
+  margin: 50px;
+  @include text-style($h1-size, 700);
+}
 .container {
-  max-width: 80%;
+  max-width: 900px;
   height: auto;
   margin: 0 auto;
-  padding: 28px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border-radius: 20px;
+  margin-bottom: 50px;
+  border-radius: 30px;
   background-color: $bg-component;
 }
 
@@ -55,6 +227,7 @@ export default {
   background-color: $yellow;
   padding: 6px;
   border-radius: 10px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -121,5 +294,14 @@ export default {
 .right-image img {
   border-top-right-radius: 20px; /* Заокруглення правого фото */
   border-bottom-right-radius: 20px; /* Заокруглення правого фото */
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 20px;
+    gap: 0;
+  }
 }
 </style>
