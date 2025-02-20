@@ -7,6 +7,7 @@
     <CourseSpeakerCard />
     <CourseComponentCard />
     <TabComponent />
+    <ExampleComponent />
   </div>
 </template>
 
@@ -19,6 +20,7 @@ import CourseSpeakerCard from '@/components/CourseSpeakerCard.vue'
 import HeaderComp from '@/components/HeaderComp.vue'
 import SliderComp from '@/components/SliderComp.vue'
 import EffortlessComp from '@/components/EffortlessComp.vue'
+import ExampleComponent from '@/components/ExampleComponent.vue'
 
 @Options({
   components: {
@@ -29,6 +31,7 @@ import EffortlessComp from '@/components/EffortlessComp.vue'
     HeaderComp,
     SliderComp,
     EffortlessComp,
+    ExampleComponent,
   },
 })
 export default class HomeView extends Vue {}

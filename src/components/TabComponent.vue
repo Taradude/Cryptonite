@@ -81,6 +81,7 @@ h1 {
   width: 100%;
   overflow-x: auto;
   max-width: 1050px;
+  margin-bottom: 80px;
 }
 
 .table-wrapper {
