@@ -123,7 +123,6 @@ h2 {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  flex-wrap: wrap;
   gap: 40px; // Збільшений проміжок між секціями для кращого вигляду
   text-align: center;
 }
@@ -196,6 +195,9 @@ li {
   .wrapper {
     max-width: 90%;
   }
+  .sections {
+    gap: 0;
+  }
   h1 {
     padding: 10px 20px;
   }
@@ -205,6 +207,15 @@ li {
   .center-bottom {
     margin-top: 25px;
     margin-bottom: 25px;
+  }
+  .text-box {
+    padding: 6px;
+    ul {
+      max-width: 90%;
+      p {
+        margin: 15px 0;
+      }
+    }
   }
 }
 </style>

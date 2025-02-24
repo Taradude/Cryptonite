@@ -200,7 +200,7 @@ h1 {
   color: $text-grey;
   font-family: 'Gilroy-Bold';
   text-align: center;
-  margin: 50px;
+  margin: 50px 0;
   @include text-style($h1-size, 700);
 }
 .container {
@@ -231,7 +231,8 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 165px;
+  width: 25%;
+  min-width: 120px;
   height: 60px;
 }
 
@@ -240,6 +241,7 @@ h1 {
   font-weight: 800;
   margin: 0;
   color: $black;
+  font-size: clamp(22px, 3vw, 32px);
 }
 
 .bottom-text {
@@ -302,6 +304,12 @@ h1 {
     padding: 12px;
     margin-bottom: 20px;
     gap: 0;
+  }
+  .top-section {
+    gap: 0;
+    .yellow-box {
+      height: auto;
+    }
   }
 }
 </style>

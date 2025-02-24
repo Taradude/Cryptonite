@@ -24,7 +24,7 @@ export default {
   data() {
     return {
       items: [
-        { title: '830%', text: 'З ПОЧАТКУ 2023' },
+        { title: '630%', text: 'З ПОЧАТКУ 2023' },
         { title: '$2 млн', text: 'В УПРАВЛІННІ' },
         { title: '200+', text: "КОМ'ЮНІТІ" },
         { title: '$400K', text: 'ЗАРОБИВ ЗА 1.5 Р' },

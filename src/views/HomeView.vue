@@ -9,6 +9,9 @@
     <TabComponent />
     <ExampleComponent />
     <StageComponent />
+    <ReviewComponent />
+    <HowCourseComponent />
+    <FaqComponent />
   </div>
 </template>
 
@@ -23,6 +26,9 @@ import SliderComp from '@/components/SliderComp.vue'
 import EffortlessComp from '@/components/EffortlessComp.vue'
 import ExampleComponent from '@/components/ExampleComponent.vue'
 import StageComponent from '@/components/StageComponent.vue'
+import ReviewComponent from '@/components/ReviewComponent.vue'
+import HowCourseComponent from '@/components/HowCourseComponent.vue'
+import FaqComponent from '@/components/FaqComponent.vue'
 
 @Options({
   components: {
@@ -35,6 +41,9 @@ import StageComponent from '@/components/StageComponent.vue'
     EffortlessComp,
     ExampleComponent,
     StageComponent,
+    ReviewComponent,
+    HowCourseComponent,
+    FaqComponent,
   },
 })
 export default class HomeView extends Vue {}

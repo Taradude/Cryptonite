@@ -19,10 +19,10 @@
             стабільний прибуток щомісяця з мінімальними витратами часу та зусиль.
           </p>
         </div>
-        <p class="old-price">6780 грн</p>
-        <p class="current-price">680 грн</p>
       </div>
       <div class="right">
+        <p class="old-price">6780 грн</p>
+        <p class="current-price">680 грн</p>
         <img ref="headImg" src="@/assets/img/header.png" alt="Фото" />
         <button ref="mainButton" class="main-btn">КУПИТИ ЗАРАЗ</button>
       </div>
@@ -97,57 +97,101 @@ export default {
 .main-btn {
   position: absolute;
   left: 20%;
-  bottom: 15%;
+  bottom: 5%;
   transform: translateX(-40%);
   z-index: 10;
-  font-size: clamp(30px, 5vw, 75px);
-  padding: 25px 50px;
+  font-size: clamp(24px, 5vw, 75px);
+  padding: clamp(12px, 3vw, 25px);
   border: none;
+  color: $black;
   white-space: nowrap;
   font-family: 'Gilroy-Bold';
-  border: none;
+  background: $text-grey;
   border-radius: 50px;
-  color: $bg-component;
-  background: linear-gradient(90deg, #fafafa, #918c87);
-  box-shadow: 0 0 10px $yellow;
-  animation: glow 1s infinite alternate;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Статичне світіння */
   cursor: pointer;
+  animation: heartbeat-shadow 2s ease-in-out infinite; /* Анімація пульсації */
 }
 
-@keyframes glow {
+@keyframes heartbeat-shadow {
   0% {
-    box-shadow: 0 0 10px $yellow;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(169, 169, 169, 0.2),
+      0 0 35px rgba(255, 255, 255, 0.1);
   }
+  // 25% {
+  //   box-shadow: 0 0 25px rgba(255, 255, 255, 0.6), 0 0 35px rgba(169, 169, 169, 0.3),
+  //     0 0 45px rgba(255, 255, 255, 0.2);
+  // }
+  50% {
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.8), 0 0 45px rgba(169, 169, 169, 0.4),
+      0 0 55px rgba(255, 255, 255, 0.3);
+  }
+  // 75% {
+  //   box-shadow: 0 0 25px rgba(255, 255, 255, 0.6), 0 0 35px rgba(169, 169, 169, 0.3),
+  //     0 0 45px rgba(255, 255, 255, 0.2);
+  // }
   100% {
-    box-shadow: 0 0 20px $yellow;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(169, 169, 169, 0.2),
+      0 0 35px rgba(255, 255, 255, 0.1);
   }
 }
+
+// @keyframes glow {
+//   0% {
+//     box-shadow: 0 0 10px $yellow;
+//   }
+//   100% {
+//     box-shadow: 0 0 20px $yellow;
+//   }
+// }
 
 .floating-div {
-  position: fixed; // Важливо: position: fixed має бути тут
+  position: fixed;
   bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 11;
-  font-size: clamp(25px, 3vw, 44px);
-  padding: 15px 40px;
+  z-index: 999;
+  font-size: clamp(24px, 5vw, 75px);
+  padding: clamp(12px, 3vw, 16px);
   border: none;
   white-space: nowrap;
   font-family: 'Gilroy-Bold';
-  border-radius: 50px;
   color: $bg-component;
-  background: linear-gradient(90deg, #fafafa, #918c87);
-  box-shadow: 0 0 10px $yellow;
-  animation: glow 1s infinite alternate;
+  background-color: $text-grey;
+  font-size: clamp(28px, 4vw, 60px);
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 25px 40px;
   cursor: pointer;
-  transition: opacity 0.3s ease-in-out;
+  box-shadow: 0 0 25px rgba(216, 216, 216, 0.6); /* Статичне світіння */
+  animation: glowing-shadow 2s ease-in-out infinite; /* Анімація для світіння */
+}
+
+@keyframes glowing-shadow {
+  0% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(169, 169, 169, 0.2),
+      0 0 35px rgba(255, 255, 255, 0.1);
+  }
+  // 25% {
+  //   box-shadow: 0 0 25px rgba(255, 255, 255, 0.6), 0 0 35px rgba(169, 169, 169, 0.3),
+  //     0 0 45px rgba(255, 255, 255, 0.2);
+  // }
+  50% {
+    box-shadow: 0 0 35px rgba(255, 255, 255, 0.8), 0 0 45px rgba(169, 169, 169, 0.4),
+      0 0 55px rgba(255, 255, 255, 0.3);
+  }
+  // 75% {
+  //   box-shadow: 0 0 25px rgba(255, 255, 255, 0.6), 0 0 35px rgba(169, 169, 169, 0.3),
+  //     0 0 45px rgba(255, 255, 255, 0.2);
+  // }
+  100% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(169, 169, 169, 0.2),
+      0 0 35px rgba(255, 255, 255, 0.1);
+  }
 }
 
 // Анімація для transition
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease;
-}
+//
 
 .fade-enter-from,
 .fade-leave-to {
@@ -201,7 +245,7 @@ export default {
   display: flex;
   flex-direction: column;
   // align-items: flex-start;
-  // justify-content: flex-start;
+  justify-content: center;
   height: 100%;
 }
 
@@ -212,10 +256,11 @@ export default {
   border-radius: 24px;
   text-align: left;
   margin-bottom: 15px;
+  min-width: 200px;
   p {
     font-family: 'Gilroy-UltraLight';
     color: $text-grey;
-    font-size: clamp(18px, 1.8vw, 28px);
+    font-size: clamp(16px, 1.8vw, 28px);
   }
 }
 
@@ -226,9 +271,26 @@ export default {
   color: white;
   text-align: right;
 }
-
 .current-price {
-  font-size: clamp(45px, 6vw, 110px);
+  position: absolute;
+  left: 40%;
+  transform: translateY(-40%);
+  bottom: 25%;
+  transform: translateX(-40%);
+  white-space: nowrap;
+  z-index: 10;
+}
+.old-price {
+  white-space: nowrap;
+  position: absolute;
+  left: 40%;
+  transform: translateY(-40%);
+  bottom: 40%;
+  transform: translateX(-40%);
+  z-index: 10;
+}
+.current-price {
+  font-size: clamp(36px, 6vw, 110px);
   font-family: 'Gilroy-Bold';
   color: $text-grey;
   text-align: right;
@@ -250,7 +312,7 @@ export default {
 .sub-title {
   font-family: 'Gilroy-H';
   color: white;
-  font-size: clamp(29px, 7vw, 77px);
+  font-size: clamp(25px, 4vw, 77px);
   line-height: normal;
 }
 .main-title,
@@ -274,13 +336,20 @@ p {
   padding: 0 45px;
   line-height: normal;
   color: $black;
-  margin-bottom: 15px;
+  margin: 15px 0;
 }
 @media (max-width: 768px) {
   // .content {
   //   flex-direction: column;
   //   text-align: center;
   // }
+  .content {
+    height: auto;
+    overflow: hidden;
+    img {
+      min-width: 300px;
+    }
+  }
   .header-wrap {
     margin-top: 60px;
   }
@@ -294,23 +363,50 @@ p {
     padding: 4px; /* Зменшення паддінгу */
   }
 }
+@media (max-width: 420px) {
+  .text-box {
+    min-width: 180px;
+  }
+  .right img {
+    min-width: 270px;
+  }
+  .old-price,
+  .current-price {
+    left: 35%;
+  }
+}
 @media (max-width: 1000px) {
   .promo-container {
-    max-width: 90%;
+    // max-width: 95%;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  .highlighted-text {
+    border-radius: 12px;
+  }
+  .header-wrap {
+    padding: 12px;
+  }
+  .left {
+    padding-left: 10px;
   }
 }
 @media (max-width: 768px) {
-  .main-btn {
-    left: 40%;
-  }
-  .content {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
+  // .main-btn {
+  //   left: 40%;
+  // }
+  // .content {
+  //   flex-direction: column;
+  //   align-items: center;
+  //   height: auto;
+  // }
   .text-box {
     order: -1;
     margin-top: 0;
+    padding: 12px;
+  }
+  .main-btn {
+    bottom: 5%;
   }
   .left {
     align-items: center;

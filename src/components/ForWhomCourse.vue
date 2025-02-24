@@ -48,8 +48,8 @@ h1 {
   color: $text-grey;
   font-family: 'Gilroy-Bold';
   text-align: center;
-  margin: 50px;
-  @include text-style($h1-size, 700);
+  margin: 50px 10px;
+  font-size: clamp(26px, 4vw, 50px);
 }
 .container {
   display: flex;
@@ -121,7 +121,9 @@ p {
     margin: 0;
     height: 80%;
   }
-
+  .container {
+    border-radius: 12px;
+  }
   //   // .container {
   //   //   flex-direction: column;
   //   //   height: auto;

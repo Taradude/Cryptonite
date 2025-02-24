@@ -31,34 +31,75 @@
 
     <div class="button-wrap">
       <img src="@/assets/img/arrowDownW.png" alt="" />
+      <div class="timer">
+        <h1>{{ formattedTime }}</h1>
+      </div>
       <button class="glow-button">ЗАБРАТИ БОНУС</button>
     </div>
   </div>
 </template>
 
 <script setup>
+import { ref, onMounted } from 'vue'
 import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Navigation } from 'vue3-carousel'
+import { Carousel, Slide } from 'vue3-carousel'
 
 import sll from '@/assets/img/sll.png'
 import slc from '@/assets/img/slc.png'
 import slr from '@/assets/img/slr.png'
 
 const images = [sll, slc, slr]
-
 const carouselConfig = {
-  itemsToShow: 1.4, // 40% від екрану
-  wrapAround: true, // Безкінечний цикл
-  autoplay: 5000, // Автоматичне прокручування кожні 5 сек
-  transition: 1000, // Плавний перехід
+  itemsToShow: 1.4,
+  wrapAround: true,
+  autoplay: 5000,
+  transition: 1000,
 }
+
+const formattedTime = ref('')
+const countdown = ref(0)
+
+const updateTimer = () => {
+  const hours = String(Math.floor(countdown.value / 3600)).padStart(2, '0')
+  const minutes = String(Math.floor((countdown.value % 3600) / 60)).padStart(2, '0')
+  const seconds = String(countdown.value % 60).padStart(2, '0')
+  formattedTime.value = `${hours}:${minutes}:${seconds}`
+}
+
+const startTimer = () => {
+  const lastReset = localStorage.getItem('bonusResetTime')
+  const now = Date.now()
+
+  if (!lastReset || now - lastReset >= 24 * 60 * 60 * 1000) {
+    localStorage.setItem('bonusResetTime', now)
+    countdown.value = 24 * 60 * 60
+  } else {
+    countdown.value = Math.floor((24 * 60 * 60 * 1000 - (now - lastReset)) / 1000)
+  }
+
+  setInterval(() => {
+    if (countdown.value > 0) {
+      countdown.value--
+      updateTimer()
+    } else {
+      localStorage.setItem('bonusResetTime', Date.now())
+      countdown.value = 24 * 60 * 60
+      updateTimer()
+    }
+  }, 1000)
+}
+
+onMounted(() => {
+  startTimer()
+  updateTimer()
+})
 </script>
 
 <style scoped lang="scss">
 h1 {
   font-family: 'Gilroy-H';
   color: $text-grey;
-  font-size: clamp(20px, 4vw, 50px);
+  font-size: clamp(18px, 4vw, 50px);
   text-align: center;
   line-height: normal;
   .yellow {
@@ -84,7 +125,11 @@ h1 {
     width: 15%;
   }
 }
-
+.timer {
+  h1 {
+    font-size: clamp(28px, 4vw, 50px);
+  }
+}
 .slide-container {
   margin-top: 30px;
   margin-bottom: 30px;
@@ -128,9 +173,9 @@ h1 {
   border: none;
   outline: none;
   font-family: 'Gilroy-Bold';
+  cursor: pointer;
   color: $bg-component;
   background: $text-grey;
-  cursor: pointer;
   position: relative;
   font-size: clamp(28px, 4vw, 60px);
   font-weight: bold;
@@ -143,47 +188,47 @@ h1 {
   text-align: center;
 }
 
-.glow-button::before {
-  content: '';
-  border-radius: 50px;
+// .glow-button::before {
+//   content: '';
+//   border-radius: 50px;
 
-  background: linear-gradient(
-    45deg,
-    #ff0000,
-    #ff7300,
-    #fffb00,
-    #48ff00,
-    #00ffd5,
-    #002bff,
-    #7a00ff,
-    #ff00c8,
-    #ff0000
-  );
-  position: absolute;
-  top: -4px;
-  border-radius: 50px;
+//   background: linear-gradient(
+//     45deg,
+//     #ff0000,
+//     #ff7300,
+//     #fffb00,
+//     #48ff00,
+//     #00ffd5,
+//     #002bff,
+//     #7a00ff,
+//     #ff00c8,
+//     #ff0000
+//   );
+//   position: absolute;
+//   top: -4px;
+//   border-radius: 50px;
 
-  left: -4px;
-  width: calc(100% + 8px);
-  height: calc(100% + 8px);
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(10px);
-  animation: glowing 15s linear infinite;
-  border-radius: 50px;
-}
+//   left: -4px;
+//   width: calc(100% + 8px);
+//   height: calc(100% + 8px);
+//   background-size: 400%;
+//   z-index: -1;
+//   filter: blur(10px);
+//   animation: glowing 15s linear infinite;
+//   border-radius: 50px;
+// }
 
-@keyframes glowing {
-  0% {
-    background-position: 0 0;
-  }
-  50% {
-    background-position: 400% 0;
-  }
-  100% {
-    background-position: 0 0;
-  }
-}
+// @keyframes glowing {
+//   0% {
+//     background-position: 0 0;
+//   }
+//   50% {
+//     background-position: 400% 0;
+//   }
+//   100% {
+//     background-position: 0 0;
+//   }
+// }
 
 /* Адаптивність */
 @media (max-width: 768px) {

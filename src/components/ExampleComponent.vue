@@ -97,6 +97,7 @@ img {
     width: 90%;
     padding: 12px;
     margin-bottom: 20px;
+    border-radius: 12px;
     gap: 0;
     .inner-box {
       padding: 12px;

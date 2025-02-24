@@ -2,8 +2,7 @@
   <div class="component-container">
     <h1>
       ЯК ТИ ПОЧНЕШ ЗАРОБЛЯТИ НА <br />
-      КРИПТОРИНКУ ЗАВДЯКИ СИСТЕМІ<br />
-      "БЕЗ ЗУСИЛЬ"
+      КРИПТОРИНКУ ЗАВДЯКИ СИСТЕМІ "БЕЗ ЗУСИЛЬ"
     </h1>
     <img src="@/assets/img/sliderArrow.png" alt="" />
     <div class="content-wrap">
@@ -95,6 +94,7 @@
     text-align: center;
     font-family: 'Gilroy-Bold';
     color: $text-grey;
+    font-size: clamp(22px, 4vw, 50px);
   }
   img {
     width: 25%;
@@ -138,7 +138,7 @@
 
     .arrow-down {
       position: absolute;
-      top: 66%; /* Центрування по вертикалі */
+      top: 70%; /* Центрування по вертикалі */
       width: 25%;
       object-fit: contain;
 
@@ -162,6 +162,10 @@
       padding: 12px;
       margin-bottom: 20px;
       gap: 0;
+    }
+    .content-block {
+      padding: 10px;
+      margin: 30px 0;
     }
   }
 }
