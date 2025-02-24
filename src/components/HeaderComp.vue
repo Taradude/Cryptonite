@@ -8,7 +8,7 @@
       <h2 class="sub-title">СИСТЕМА ЗАРОБІТКУ НА <br />КРИПТОВАЛЮТНОМУ РИНКУ</h2>
       <h1 class="sub-title highlighted-text">"БЕЗ ЗУСИЛЬ”</h1>
       <h2 class="profit-text">
-        Яка допомогла мені заробити <span class="highlight-profit">$400 000</span> за 1.5 роки
+        Яка допомогла мені заробити <br /><span class="highlight-profit">$400 000</span> за 1.5 роки
       </h2>
     </div>
     <div class="content">
@@ -312,7 +312,7 @@ export default {
 .sub-title {
   font-family: 'Gilroy-H';
   color: white;
-  font-size: clamp(25px, 4vw, 77px);
+  font-size: clamp(23px, 4vw, 77px);
   line-height: normal;
 }
 .main-title,

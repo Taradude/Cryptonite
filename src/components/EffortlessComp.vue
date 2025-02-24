@@ -56,7 +56,7 @@
       </ul>
     </div>
     <h2 class="bottom">
-      Саме за такою <span class="yellow">системою</span> за 1.5 роки я заробив <br />собі та клієнтам<span
+      Саме за такою <span class="yellow">системою</span> за 1.5 роки я заробив собі та клієнтам<span
         class="yellow"
       >
         400 000$</span
