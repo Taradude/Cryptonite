@@ -134,7 +134,7 @@ td {
 /* "+" і "-" виділені */
 .plus,
 .minus {
-  font-size: clamp(46px, 1.6vw, 60px);
+  font-size: clamp(36px, 1.6vw, 60px);
 }
 .plus {
   color: $yellow;

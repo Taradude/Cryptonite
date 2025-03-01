@@ -26,8 +26,7 @@
 
         <ul>
           <li>
-            Індикатори - що це за помічники, які допомагають трейдеру - інвестору зрозуміти, коли краще
-            купувати-продавати криптовалюту
+            Індикатори - помічники, які допомагають зрозуміти, коли краще купувати-продавати криптовалюту
           </li>
           <li>Як користуватися індикаторами</li>
         </ul>
@@ -151,7 +150,7 @@ p {
 }
 
 .blue-box {
-  font-size: clamp(20px, 4vw, 32px);
+  font-size: clamp(16px, 4vw, 32px);
   background-color: rgb(11, 68, 255);
   font-family: 'Gilroy-Bold';
   border-radius: 5px;
@@ -174,7 +173,6 @@ li {
   color: white;
   font-size: clamp(14px, 3vw, 24px);
   margin-bottom: 8px;
-  list-style: none;
 }
 
 .text-box {
@@ -182,6 +180,9 @@ li {
   padding: 20px;
   border-radius: 15px;
   margin-top: 20px;
+  li {
+    list-style: none;
+  }
 }
 
 .text-box ul {
@@ -204,9 +205,7 @@ li {
   h1 {
     padding: 6px 12px;
   }
-  .blue-box {
-    padding: 5px 13px;
-  }
+
   .center-bottom {
     margin-top: 25px;
     margin-bottom: 25px;
@@ -218,6 +217,14 @@ li {
       p {
         margin: 15px 0;
       }
+    }
+  }
+  @media (max-width: 500px) {
+    .left .blue-box {
+      padding: 5px 30px;
+    }
+    .right .blue-box {
+      padding: 5px 20px;
     }
   }
 }
