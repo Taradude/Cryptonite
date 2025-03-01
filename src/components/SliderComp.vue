@@ -126,7 +126,7 @@ onMounted(() => {
 h1 {
   font-family: 'Gilroy-H';
   color: $text-grey;
-  font-size: clamp(18px, 4vw, 50px);
+  font-size: clamp(16px, 4vw, 50px);
   text-align: center;
   line-height: normal;
   letter-spacing: 0.5px;

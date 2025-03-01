@@ -55,13 +55,13 @@
         </li>
       </ul>
     </div>
-    <h2 class="bottom">
+    <p class="bottom">
       Саме за такою <span class="yellow">системою</span> за 1.5 роки я заробив собі та клієнтам<span
         class="yellow"
       >
         400 000$</span
       >
-    </h2>
+    </p>
   </div>
 </template>
 
@@ -87,7 +87,7 @@ h1 {
   color: $black;
   margin-bottom: 25px;
   margin-top: 25px;
-  font-size: clamp(26px, 5vw, 66px);
+  font-size: clamp(22px, 5vw, 66px);
   line-height: normal;
   font-family: 'Gilroy-H';
   display: inline-block;
@@ -106,13 +106,15 @@ h2 {
   margin: 0 auto 20px;
 }
 
-h2 {
+p {
   font-size: clamp(20px, 5vw, 48px);
   margin-bottom: 15px;
+  color: $text-grey;
 }
 .bottom {
   margin-top: 30px;
   font-size: clamp(20px, 5vw, 32px);
+  font-family: 'Gilroy-Reg';
   .yellow {
     font-family: 'Gilroy-Bold';
     color: $yellow;

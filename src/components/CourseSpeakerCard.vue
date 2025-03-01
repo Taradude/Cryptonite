@@ -117,7 +117,7 @@ h1 {
 
 h2 {
   color: $bg-color;
-  font-size: clamp(32px, 3vw, 60px);
+  font-size: clamp(28px, 3vw, 60px);
   font-family: 'Gilroy-H';
   white-space: nowrap; // Забороняє перенос тексту
 }

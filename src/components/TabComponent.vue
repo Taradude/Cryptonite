@@ -153,6 +153,7 @@ td {
 
   .left-align {
     min-width: 100px;
+    padding: 4px 0px;
   }
 }
 </style>

@@ -92,11 +92,11 @@ h2 {
   justify-content: center;
   align-items: center;
   width: 25%;
-  min-width: 100px;
+  min-width: 80px;
   height: 60px;
   font-family: 'Gilroy-EBold';
   color: $black;
-  font-size: clamp(22px, 3vw, 32px);
+  font-size: clamp(16px, 3vw, 32px);
 }
 
 .final-box {
@@ -146,7 +146,8 @@ h2 {
     border-radius: 10px;
   }
   .yellow-box {
-    height: 40px;
+    height: 30px;
+    border-radius: 4px;
   }
 
   .final-box img {

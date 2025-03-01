@@ -2,7 +2,7 @@
   <div class="component-container">
     <h1>
       ЯК ТИ ПОЧНЕШ ЗАРОБЛЯТИ НА <br />
-      КРИПТОРИНКУ ЗАВДЯКИ СИСТЕМІ "БЕЗ ЗУСИЛЬ"
+      КРИПТОРИНКУ ЗАВДЯКИ СИСТЕМІ <br />"БЕЗ ЗУСИЛЬ"
     </h1>
     <img src="@/assets/img/sliderArrow.png" alt="" />
     <div class="content-wrap">
