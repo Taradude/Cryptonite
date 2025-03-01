@@ -119,6 +119,10 @@ p {
     color: $yellow;
   }
 }
+// .left .blue-box {
+//   align-self: normal;
+//   margin-left: 0;
+// }
 
 .sections {
   display: flex;
@@ -221,7 +225,7 @@ li {
   }
   @media (max-width: 500px) {
     .left .blue-box {
-      padding: 5px 30px;
+      padding: 5px 40px;
     }
     .right .blue-box {
       padding: 5px 20px;
