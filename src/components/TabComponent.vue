@@ -8,7 +8,7 @@
             <th class="left-align">Причина</th>
             <th>Класичний трейдинг</th>
             <th>Класичне інвестування</th>
-            <th>Система "Без Зусиль"</th>
+            <th>Система <span class="small">"Без Зусиль"</span></th>
           </tr>
         </thead>
         <tbody>
@@ -79,14 +79,13 @@ h1 {
 
 .table-container {
   width: 100%;
-  overflow-x: auto;
+  // overflow-x: auto;
   max-width: 1050px;
   margin-bottom: 80px;
 }
 
 .table-wrapper {
   width: 100%;
-  overflow-x: auto;
 }
 
 table {
@@ -129,7 +128,7 @@ td {
 .left-align {
   text-align: left;
   min-width: 120px;
-  font-size: clamp(16px, 2vw, 28px);
+  font-size: clamp(14px, 2vw, 28px);
 }
 
 /* "+" і "-" виділені */
@@ -144,9 +143,6 @@ td {
 @media (max-width: 1000px) {
   .table-container {
     width: 93%;
-  }
-  table {
-    font-size: 14px;
   }
 
   thead th,

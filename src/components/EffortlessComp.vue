@@ -81,13 +81,13 @@ export default {
 
 h1 {
   background-color: #ffcc00;
-  border-radius: 25px;
+  border-radius: 6px;
   padding: 20px 45px;
   line-height: normal;
   color: $black;
   margin-bottom: 25px;
   margin-top: 25px;
-  font-size: clamp(22px, 5vw, 66px);
+  font-size: clamp(26px, 5vw, 66px);
   line-height: normal;
   font-family: 'Gilroy-H';
   display: inline-block;
@@ -101,7 +101,7 @@ h2 {
 .center-image img,
 .center-bottom img {
   max-width: 100px;
-  width: clamp(50px, 10vw, 100px);
+  width: clamp(60px, 10vw, 100px);
   display: block;
   margin: 0 auto 20px;
 }
@@ -111,7 +111,7 @@ h2 {
   margin-bottom: 15px;
 }
 .bottom {
-  margin: 30px 0;
+  margin-top: 30px;
   font-size: clamp(20px, 5vw, 32px);
   .yellow {
     font-family: 'Gilroy-Bold';
@@ -149,10 +149,10 @@ h2 {
 }
 
 .blue-box {
-  font-size: clamp(16px, 4vw, 32px);
+  font-size: clamp(20px, 4vw, 32px);
   background-color: rgb(11, 68, 255);
   font-family: 'Gilroy-Bold';
-  border-radius: 15px;
+  border-radius: 5px;
   padding: 15px 35px;
   color: white;
   max-width: 80%; // Обмеження ширини, щоб виглядало компактніше
@@ -172,6 +172,7 @@ li {
   color: white;
   font-size: clamp(14px, 3vw, 24px);
   margin-bottom: 8px;
+  list-style: none;
 }
 
 .text-box {
@@ -199,7 +200,7 @@ li {
     gap: 0;
   }
   h1 {
-    padding: 10px 20px;
+    padding: 6px 12px;
   }
   .blue-box {
     padding: 5px 13px;

@@ -100,7 +100,7 @@ h1 {
 }
 
 .pagination-buttons img {
-  width: clamp(40px, 8vw, 100px);
+  width: clamp(50px, 8vw, 100px);
 }
 
 @media (max-width: 768px) {
@@ -113,9 +113,9 @@ h1 {
   .slide-image {
     max-width: 100%;
   }
-  .pagination-buttons img {
-    width: 30px;
-    height: 30px;
-  }
+  // .pagination-buttons img {
+  //   width: 30px;
+  //   height: 30px;
+  // }
 }
 </style>

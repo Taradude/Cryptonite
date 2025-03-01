@@ -92,9 +92,9 @@ h2 {
   justify-content: center;
   align-items: center;
   width: 25%;
-  min-width: 120px;
+  min-width: 100px;
   height: 60px;
-  font-family: 'Gilroy-Bold';
+  font-family: 'Gilroy-EBold';
   color: $black;
   font-size: clamp(22px, 3vw, 32px);
 }
@@ -137,9 +137,13 @@ h2 {
     margin-bottom: 20px;
     gap: 0;
   }
+  .box {
+    border-radius: 12px;
+  }
   .box,
   .final-box {
     padding: 16px;
+    border-radius: 10px;
   }
   .yellow-box {
     height: 40px;

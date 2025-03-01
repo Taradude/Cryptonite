@@ -36,10 +36,10 @@ export default {
 
 <style scoped lang="scss">
 .hero-section {
-  margin-top: 50px;
+  // margin-top: 50px;
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 80dvh;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -71,7 +71,9 @@ h1 {
   justify-content: flex-end;
 
   img {
+    // transform: rotate(3deg);
     height: 100%;
+    min-height: 485px;
     width: auto;
     object-fit: cover;
   }
@@ -91,7 +93,7 @@ h1 {
   width: 666px;
   height: 100px;
   background: $bg-color;
-  border-radius: 40px;
+  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -103,7 +105,7 @@ h1 {
 
 .inner-box {
   width: calc(0.5 * min(666px, 40vw));
-  height: 120%;
+  height: 110%;
   background: $text-grey;
   border-radius: 25px;
   display: flex;
@@ -115,7 +117,7 @@ h1 {
 
 h2 {
   color: $bg-color;
-  font-size: clamp(1.5rem, 3.5vw, 4rem);
+  font-size: clamp(32px, 3vw, 60px);
   font-family: 'Gilroy-H';
   white-space: nowrap; // Забороняє перенос тексту
 }
@@ -156,7 +158,7 @@ p {
   }
   .image-container {
     position: absolute;
-    right: -50%;
+    right: -45%;
     top: 20%;
     width: 30%;
     height: 60%;
@@ -171,6 +173,7 @@ p {
   .inner-box {
     width: 35%;
     height: 120%;
+    border-radius: 15px;
   }
 
   p {
@@ -182,7 +185,11 @@ p {
     width: 20%;
   }
 }
-
+@media (max-width: 400px) {
+  .image-container {
+    right: -50%;
+  }
+}
 @media (max-width: 480px) {
   .bottom-container {
     left: 10%;
@@ -195,7 +202,7 @@ p {
 
   .inner-box {
     width: 30%;
-    height: 120%;
+    height: 110%;
   }
 
   p {

@@ -132,7 +132,7 @@
       margin: 0;
       color: white;
       font-family: 'Gilroy-reg';
-      font-size: clamp(16px, 2.2vw, 28px);
+      font-size: clamp(14px, 2.2vw, 28px);
       line-height: normal;
     }
 
@@ -166,6 +166,7 @@
     .content-block {
       padding: 10px;
       margin: 30px 0;
+      border-radius: 10px;
     }
   }
 }

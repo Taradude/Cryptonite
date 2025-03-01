@@ -87,10 +87,10 @@ h1 {
   margin: 15px 0;
 }
 .contact {
-  height: 300px;
+  height: 150px;
   display: flex;
   flex-direction: row;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   margin-bottom: 100px;
 
@@ -139,7 +139,7 @@ h1 {
   background-color: $yellow;
   padding: 6px 12px;
   border-radius: 10px;
-  font-family: 'Gilroy-Bold';
+  font-family: 'Gilroy-EBold';
   color: $black;
   font-size: clamp(14px, 3vw, 32px);
   width: fit-content;
@@ -162,6 +162,10 @@ p {
     flex-direction: column;
     align-items: flex-start;
     padding: 12px 16px;
+    border-radius: 12px;
+    .yellow-box {
+      border-radius: 6px;
+    }
   }
   .box-text {
     max-width: 90%;

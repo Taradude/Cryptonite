@@ -1,39 +1,41 @@
 <template>
-  <h1>ДЛЯ КОГО ЦЕЙ МІНІКУРС?</h1>
-  <div class="container">
-    <div class="image-container">
-      <img src="@/assets/img/1-for.png" alt="Image" />
+  <div class="for-whom">
+    <h1>ДЛЯ КОГО ЦЕЙ МІНІКУРС?</h1>
+    <div class="container">
+      <div class="image-container">
+        <img src="@/assets/img/1-for.png" alt="Image" />
+      </div>
+      <div class="text-container">
+        <h2>ПОЧАТКІВЕЦЬ</h2>
+        <p>Якщо ти хочеш почати заробляти на крипті, але не знаєш, з чого почати</p>
+      </div>
     </div>
-    <div class="text-container">
-      <h2>ПОЧАТКІВЕЦЬ</h2>
-      <p>Якщо ти хочеш почати заробляти на крипті, але не знаєш, з чого почати</p>
+    <div class="container">
+      <div class="image-container">
+        <img src="@/assets/img/2-for.png" alt="Image" />
+      </div>
+      <div class="text-container">
+        <h2>ТРЕЙДЕР</h2>
+        <p>Який хоче систематизувати свій підхід та прибрати емоції з торгівлі</p>
+      </div>
     </div>
-  </div>
-  <div class="container">
-    <div class="image-container">
-      <img src="@/assets/img/2-for.png" alt="Image" />
+    <div class="container">
+      <div class="image-container">
+        <img src="@/assets/img/3-for.png" alt="Image" />
+      </div>
+      <div class="text-container">
+        <h2>ІНВЕСТОР</h2>
+        <p>Який шукає перевірені методи для стабільного прибутку та мінімізації ризиків</p>
+      </div>
     </div>
-    <div class="text-container">
-      <h2>ТРЕЙДЕР</h2>
-      <p>Який хоче систематизувати свій підхід та прибрати емоції з торгівлі</p>
-    </div>
-  </div>
-  <div class="container">
-    <div class="image-container">
-      <img src="@/assets/img/3-for.png" alt="Image" />
-    </div>
-    <div class="text-container">
-      <h2>ІНВЕСТОР</h2>
-      <p>Який шукає перевірені методи для стабільного прибутку та мінімізації ризиків</p>
-    </div>
-  </div>
-  <div class="container">
-    <div class="image-container">
-      <img src="@/assets/img/4-for.png" alt="Image" />
-    </div>
-    <div class="text-container">
-      <h2>КОЖНОГО, ХТО НЕ ХОЧЕ СЛІДКУВАТИ ЗА РИНКОМ 24/7</h2>
-      <p>Якщо тобі важливо отримувати прибуток без постійного моніторингу графіків</p>
+    <div class="container">
+      <div class="image-container">
+        <img src="@/assets/img/4-for.png" alt="Image" />
+      </div>
+      <div class="text-container">
+        <h2>КОЖНОГО, ХТО НЕ ХОЧЕ СЛІДКУВАТИ ЗА РИНКОМ 24/7</h2>
+        <p>Якщо тобі важливо отримувати прибуток без постійного моніторингу графіків</p>
+      </div>
     </div>
   </div>
 </template>
@@ -44,6 +46,12 @@ export default {}
 
 <style scoped lang="scss">
 @import '@/styles/colors.scss';
+.for-whom {
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 h1 {
   color: $text-grey;
   font-family: 'Gilroy-Bold';
@@ -94,7 +102,7 @@ h2 {
   color: $black;
   font-family: 'Gilroy-H';
   line-height: normal;
-  font-size: clamp(18px, 2.2vw, 28px);
+  font-size: clamp(16px, 2.2vw, 28px);
 }
 
 p {
@@ -102,17 +110,19 @@ p {
   font-size: 1rem;
   color: $black;
   font-family: 'Gilroy-reg';
-  font-size: clamp(18px, 2.2vw, 28px);
+  font-size: clamp(16px, 2.2vw, 28px);
   line-height: normal;
 }
 @media (max-width: 1000px) {
   .container {
     width: 90%;
-    height: 120px;
+    height: 100px;
   }
-
+  .for-whom {
+    margin-bottom: 0;
+  }
   .container + .container + .container + .container {
-    height: 160px !important;
+    height: 130px !important;
   }
 }
 

@@ -35,6 +35,10 @@
         <h1>{{ formattedTime }}</h1>
       </div>
       <button class="glow-button">ЗАБРАТИ БОНУС</button>
+      <div class="access-count">
+        <p v-if="accessesLeft > 0">Залишилося {{ accessesLeft }}/100 доступів</p>
+        <p v-else>🔥 Усі бонуси розібрані! 🔥 <br />Повертайся за 24 години.</p>
+      </div>
     </div>
   </div>
 </template>
@@ -47,6 +51,26 @@ import { Carousel, Slide } from 'vue3-carousel'
 import sll from '@/assets/img/sll.png'
 import slc from '@/assets/img/slc.png'
 import slr from '@/assets/img/slr.png'
+
+const accessesLeft = ref(99)
+
+const loadAccesses = () => {
+  const savedAccesses = localStorage.getItem('accessesLeft')
+  accessesLeft.value = savedAccesses ? parseInt(savedAccesses, 10) : 99
+}
+
+const decreaseAccesses = () => {
+  if (accessesLeft.value > 0) {
+    const decrement = Math.floor(Math.random() * 4) + 1 // Випадкове зменшення на 1-3
+    accessesLeft.value = Math.max(0, accessesLeft.value - decrement)
+    localStorage.setItem('accessesLeft', accessesLeft.value)
+  }
+}
+
+onMounted(() => {
+  loadAccesses()
+  setInterval(decreaseAccesses, 30 * 60 * 1000) // Раз на 30 хв
+})
 
 const images = [sll, slc, slr]
 const carouselConfig = {
@@ -82,8 +106,11 @@ const startTimer = () => {
       countdown.value--
       updateTimer()
     } else {
+      // ОНОВЛЮЄМО ДОСТУПИ КОЛИ ТАЙМЕР ОБНУЛИВСЯ
       localStorage.setItem('bonusResetTime', Date.now())
       countdown.value = 24 * 60 * 60
+      accessesLeft.value = 99 // Скидаємо доступи до початкового значення
+      localStorage.setItem('accessesLeft', 99) // Зберігаємо в локальному сховищі
       updateTimer()
     }
   }, 1000)
@@ -102,12 +129,21 @@ h1 {
   font-size: clamp(18px, 4vw, 50px);
   text-align: center;
   line-height: normal;
+  letter-spacing: 0.5px;
+
   .yellow {
     color: $yellow;
   }
 }
+.access-count {
+  p {
+    font-size: clamp(20px, 3vw, 32px);
+    font-family: 'Gilroy-Reg';
+    color: $text-grey;
+  }
+}
 .paragraph p {
-  font-size: clamp(16px, 2vw, 24px);
+  font-size: clamp(13px, 2vw, 24px);
   font-family: 'Gilroy-Reg';
   color: $text-grey;
   text-align: center;
@@ -127,6 +163,7 @@ h1 {
 }
 .timer {
   h1 {
+    font-family: 'Gilroy-Ebold';
     font-size: clamp(28px, 4vw, 50px);
   }
 }
@@ -145,7 +182,7 @@ h1 {
   align-items: center;
 
   img {
-    width: 15%;
+    width: 20%;
   }
 }
 .slide-image {
@@ -169,10 +206,10 @@ h1 {
   text-align: center;
   // height: 70px;
   margin-top: 25px;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
   border: none;
   outline: none;
-  font-family: 'Gilroy-Bold';
+  font-family: 'Gilroy-H';
   cursor: pointer;
   color: $bg-component;
   background: $text-grey;
@@ -237,7 +274,7 @@ h1 {
   }
   h1 {
     margin-top: 25px;
-    margin-bottom: 25px;
+    // margin-bottom: 25px;
   }
 
   .slide-container {

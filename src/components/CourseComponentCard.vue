@@ -212,7 +212,7 @@ h1 {
   flex-direction: column;
   gap: 20px;
   margin-bottom: 50px;
-  border-radius: 30px;
+  border-radius: 15px;
   background-color: $bg-component;
 }
 
@@ -220,7 +220,6 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  padding: 10px;
 }
 
 .yellow-box {
@@ -232,20 +231,21 @@ h1 {
   justify-content: center;
   align-items: center;
   width: 25%;
-  min-width: 120px;
+  min-width: 80px;
   height: 60px;
 }
 
 .text-content {
-  font-family: 'Gilroy-H';
+  font-family: 'Gilroy-EBold';
   font-weight: 800;
   margin: 0;
   color: $black;
-  font-size: clamp(22px, 3vw, 32px);
+  font-size: clamp(16px, 3vw, 32px);
 }
 
 .bottom-text {
   margin: 0;
+  margin-bottom: 5px;
   font-size: 1rem;
   color: white;
   font-weight: 100;
@@ -305,10 +305,21 @@ h1 {
     margin-bottom: 20px;
     gap: 0;
   }
+  .left-image img {
+    border-top-left-radius: 6px; /* Заокруглення лівого фото */
+    border-bottom-left-radius: 6px; /* Заокруглення лівого фото */
+  }
+
+  .right-image img {
+    border-top-right-radius: 6px; /* Заокруглення правого фото */
+    border-bottom-right-radius: 6px; /* Заокруглення правого фото */
+  }
   .top-section {
     gap: 0;
     .yellow-box {
       height: auto;
+      padding: 2px;
+      border-radius: 5px;
     }
   }
 }
