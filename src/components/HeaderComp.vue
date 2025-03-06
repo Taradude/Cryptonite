@@ -250,8 +250,8 @@ export default {
   margin-bottom: 15px;
   min-width: 200px;
   p {
-    font-family: 'Gilroy-UltraLight';
-    color: $text-grey;
+    font-family: 'Gilroy-Reg';
+    color: white;
     font-size: clamp(13px, 1.8vw, 28px);
     line-height: 1.21;
   }
