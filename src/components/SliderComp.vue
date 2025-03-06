@@ -115,13 +115,13 @@ onMounted(() => {
 h1 {
   font-family: 'Gilroy-H';
   color: $text-grey;
-  font-size: clamp(19px, 5vw, 50px); /* Більше vw для гнучкості */
+  font-size: clamp(19px, 4.5vw, 50px); /* Більше vw для гнучкості */
   text-align: center;
   line-height: 1.1; /* Зменшена висота рядка для щільного тексту */
   letter-spacing: 0.5px;
   white-space: nowrap; /* Заборона перенесення */
 
-  max-width: 100%; /* Обмеження по ширині контейнера */
+  max-width: 99%; /* Обмеження по ширині контейнера */
 }
 
 .yellow {

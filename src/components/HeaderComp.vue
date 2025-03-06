@@ -298,10 +298,10 @@ export default {
   height: auto;
 }
 .header-wrap {
-  margin-top: 120px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center; /* Центрує елементи по вертикалі */
+  align-items: center; /* Центрує елементи по горизонталі */
 }
 .profit-text {
   margin-top: 15px;
@@ -311,8 +311,8 @@ export default {
   font-family: 'Gilroy-H';
   color: white;
   font-size: clamp(32px, 4vw, 77px);
-  // line-height: normal;
-  letter-spacing: 1px;
+  line-height: normal;
+  // letter-spacing: 1px;
 }
 .main-title,
 .profit-text {

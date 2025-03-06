@@ -121,16 +121,16 @@ thead th:first-child {
 }
 td {
   padding: 12px;
-  // border-bottom: 0.7px $table-border;
+  border-bottom: 0.7px $table-border;
   // border-bottom: 0.1px solid rgba(221, 221, 221, 0.6); /* Тонка лінія */
   // box-shadow: inset 0 -1px 0 rgba(221, 221, 221, 0.6);
 
   vertical-align: middle;
   word-wrap: break-word;
 }
-tr {
-  box-shadow: inset 0 -1px 0 rgba(221, 221, 221, 0.6);
-}
+// tr {
+//   box-shadow: inset 0 -1px 0 rgba(221, 221, 221, 0.6);
+// }
 
 .left-align {
   text-align: left;
