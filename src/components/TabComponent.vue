@@ -105,7 +105,7 @@ thead {
 
 thead th {
   padding: 10px;
-  border-bottom: $table-border;
+  // border-bottom: $table-border;
   text-align: center;
   font-family: 'Gilroy-Ultralight';
   font-size: clamp(10px, 2vw, 32px) !important;
@@ -121,7 +121,7 @@ thead th:first-child {
 }
 td {
   padding: 12px;
-  border-bottom: 0.7px $table-border;
+  border-bottom: $table-border;
   // border-bottom: 0.1px solid rgba(221, 221, 221, 0.6); /* Тонка лінія */
   // box-shadow: inset 0 -1px 0 rgba(221, 221, 221, 0.6);
 

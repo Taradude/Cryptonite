@@ -302,6 +302,7 @@ export default {
   flex-direction: column;
   justify-content: center; /* Центрує елементи по вертикалі */
   align-items: center; /* Центрує елементи по горизонталі */
+  margin-top: 80px;
 }
 .profit-text {
   margin-top: 15px;
@@ -312,6 +313,7 @@ export default {
   color: white;
   font-size: clamp(32px, 4vw, 77px);
   line-height: normal;
+  padding: 2px 0;
   // letter-spacing: 1px;
 }
 .main-title,
@@ -388,7 +390,7 @@ p {
   }
   .highlighted-text {
     border-radius: 6px;
-    padding: 0 5px;
+    padding: 3px 12px;
   }
   // .header-wrap {
   //   padding: 12px;
