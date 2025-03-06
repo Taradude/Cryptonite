@@ -390,7 +390,8 @@ p {
   }
   .highlighted-text {
     border-radius: 6px;
-    padding: 3px 12px;
+    padding: 0 12px;
+    padding-top: 2px;
   }
   // .header-wrap {
   //   padding: 12px;

@@ -237,7 +237,7 @@ p {
 
   .box {
     width: 95%;
-    height: 40px;
+    height: 44px;
   }
 
   .inner-box {
