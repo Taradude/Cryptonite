@@ -78,10 +78,24 @@ export default {
       ]
       this.nextDate = `${today.getDate()} ${months[today.getMonth()]}`
     },
+    // handleScroll() {
+    //   const mainButton = this.$refs.mainButton
+    //   const rect = mainButton.getBoundingClientRect()
+    //   this.showFloatingButton = rect.bottom < 0 // Кнопка зникла з екрану
+    // },
     handleScroll() {
       const mainButton = this.$refs.mainButton
-      const rect = mainButton.getBoundingClientRect()
-      this.showFloatingButton = rect.bottom < 0 // Кнопка зникла з екрану
+      const faqQuestion = document.querySelector('#faq-question-7')
+
+      if (!mainButton || !faqQuestion) return
+
+      const rectButton = mainButton.getBoundingClientRect()
+      const rectFaq = faqQuestion.getBoundingClientRect()
+
+      const isMainButtonHidden = rectButton.bottom < 0
+      const isFaqVisible = rectFaq.top < window.innerHeight && rectFaq.bottom > 0
+
+      this.showFloatingButton = isMainButtonHidden && !isFaqVisible
     },
 
     checkMobile() {

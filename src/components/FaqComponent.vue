@@ -2,7 +2,12 @@
   <div class="course-section">
     <h1>ЧАСТІ ЗАПИТАННЯ</h1>
     <div class="boxes-container">
-      <div class="box" v-for="(item, index) in boxes" :key="index">
+      <div
+        class="box"
+        v-for="(item, index) in boxes"
+        :key="index"
+        :id="index === 8 ? 'faq-question-7' : null"
+      >
         <div class="yellow-box">
           <span>{{ item.question }}</span>
         </div>
@@ -11,10 +16,11 @@
       </div>
     </div>
     <div class="contact">
-      <p>Зв'язатися з командою</p>
-      <div class="button">
-        <img src="@/assets/img/tg.png" alt="" />
+      <div class="left">
+        <p>Публічна оферта</p>
+        <p>Політика конфіденційності</p>
       </div>
+      <div class="right"><p>Зв'язатися з командою</p></div>
     </div>
   </div>
 </template>
@@ -88,21 +94,23 @@ h1 {
   margin-top: 35px;
 }
 .contact {
-  height: 150px;
+  height: 80px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin-bottom: 100px;
+  text-align: left;
+
+  .left,
+  .right {
+    display: flex;
+    flex-direction: column;
+  }
 
   p {
     font-family: 'Gilroy-reg';
     color: white;
-    font-size: clamp(16px, 2vw, 24px);
-  }
-  img {
-    width: 60%;
-    max-width: 80px;
+    font-size: clamp(12px, 1.5vw, 24px);
+    margin: 4px 0;
   }
 }
 .boxes-container {

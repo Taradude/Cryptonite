@@ -64,7 +64,7 @@ h1 {
 .image-container {
   position: absolute;
   right: 20%;
-  top: 0;
+  top: 10%;
   width: 30%;
   height: 90%;
   display: flex;
@@ -74,6 +74,7 @@ h1 {
     // transform: rotate(3deg);
     height: 100%;
     min-height: 300px;
+    max-height: 600px;
     width: auto;
     object-fit: cover;
     transform: rotate(4deg);
@@ -231,7 +232,7 @@ p {
   .bottom-container {
     width: 75%;
     left: 3%;
-    gap: 8px;
+    gap: 5px;
   }
 
   .box {
