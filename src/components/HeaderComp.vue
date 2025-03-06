@@ -303,6 +303,9 @@ export default {
   flex-direction: column;
   align-items: center;
 }
+.profit-text {
+  margin-top: 15px;
+}
 
 .sub-title {
   font-family: 'Gilroy-H';
@@ -333,7 +336,7 @@ p {
   padding: 0 15px;
   line-height: normal;
   color: $black;
-  margin-bottom: 15px;
+  // margin-bottom: 15px;
 }
 @media (max-width: 768px) {
   // .content {
@@ -396,7 +399,7 @@ p {
 }
 @media (max-width: 768px) {
   .profit-text {
-    margin-top: 5px;
+    margin-top: 15px;
   }
   // .main-btn {
   //   left: 40%;
