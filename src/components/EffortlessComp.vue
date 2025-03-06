@@ -114,6 +114,7 @@ p {
   margin-top: 30px;
   font-size: clamp(20px, 5vw, 32px);
   font-family: 'Gilroy-Reg';
+  line-height: 1.08;
   .yellow {
     font-family: 'Gilroy-Bold';
     color: $yellow;
@@ -175,8 +176,9 @@ ul {
 li {
   font-family: 'Gilroy-Reg';
   color: white;
-  font-size: clamp(14px, 3vw, 24px);
-  margin-bottom: 8px;
+  font-size: clamp(12px, 3vw, 24px);
+  // margin-bottom: 8px;
+  line-height: 1.4;
 }
 
 .text-box {
@@ -185,6 +187,7 @@ li {
   border-radius: 15px;
   margin-top: 20px;
   li {
+    font-family: 'Gilroy-Medium';
     list-style: none;
   }
 }
@@ -194,7 +197,7 @@ li {
 }
 
 .text-box li p {
-  font-size: clamp(18px, 3vw, 32px);
+  font-size: clamp(13px, 3vw, 32px);
   margin: 25px 0;
   line-height: normal;
 }
@@ -217,7 +220,7 @@ li {
   .text-box {
     padding: 6px;
     ul {
-      max-width: 90%;
+      max-width: 95%;
       p {
         margin: 15px 0;
       }
@@ -226,6 +229,8 @@ li {
   @media (max-width: 500px) {
     .left .blue-box {
       padding: 5px 40px;
+      position: relative;
+      left: -5px;
     }
     .right .blue-box {
       padding: 5px 20px;

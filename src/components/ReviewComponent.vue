@@ -34,10 +34,11 @@ const images = [img1, img2, img3]
 const carouselRef = ref(null)
 
 const carouselConfig = {
-  itemsToShow: 1,
+  itemsToShow: 1.1, // Легке відображення сусідніх фото
   wrapAround: true,
   autoplay: 5000,
   transition: 1000,
+  snapAlign: 'center',
 }
 
 const prevSlide = () => {
@@ -54,7 +55,6 @@ const nextSlide = () => {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto 50px;
-  padding: 0 20px;
   text-align: center;
 }
 
@@ -70,16 +70,26 @@ h1 {
   position: relative;
 }
 
+.carousel__track {
+  gap: 15px;
+}
+
+// .carousel__slide {
+//   padding: 10px !important;
+//   margin: 15px !important;
+// }
+
 .slide-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
+  justify-content: center; /* Центрує по горизонталі */
+  align-items: center; /* Центрує по вертикалі */
+  height: 100%; /* Встановлює висоту на 100% */
+  padding: 0; /* Прибираємо зайві відступи */
 }
 
 .slide-image {
-  width: 100%;
-  max-width: 800px;
+  width: 60vw;
+  max-width: 850px;
   height: auto;
   object-fit: contain;
   border-radius: 10px;
@@ -105,17 +115,13 @@ h1 {
 
 @media (max-width: 768px) {
   .slide-image {
-    max-width: 90%;
+    width: 75vw;
   }
 }
 
 @media (max-width: 480px) {
   .slide-image {
-    max-width: 100%;
+    width: 90vw;
   }
-  // .pagination-buttons img {
-  //   width: 30px;
-  //   height: 30px;
-  // }
 }
 </style>

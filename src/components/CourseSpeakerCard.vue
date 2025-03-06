@@ -27,7 +27,7 @@ export default {
         { title: '630%', text: 'З ПОЧАТКУ 2023' },
         { title: '$2 млн', text: 'В УПРАВЛІННІ' },
         { title: '200+', text: "КОМ'ЮНІТІ" },
-        { title: '$400K', text: 'ЗАРОБИВ ЗА 1.5 Р' },
+        { title: '$400K', text: 'ЗАРОБИВ ЗА 1,5 Р' },
       ],
     }
   },
@@ -51,7 +51,7 @@ h1 {
   color: $text-grey;
   position: absolute;
   top: 10%;
-  left: 15%;
+  left: 25%;
   font-family: 'Gilroy-Bold';
   font-size: clamp(24px, 4vw, 48px);
   line-height: normal;
@@ -63,19 +63,20 @@ h1 {
 
 .image-container {
   position: absolute;
-  right: 5%;
+  right: 20%;
   top: 0;
   width: 30%;
-  height: 100%;
+  height: 90%;
   display: flex;
   justify-content: flex-end;
 
   img {
     // transform: rotate(3deg);
     height: 100%;
-    min-height: 485px;
+    min-height: 300px;
     width: auto;
     object-fit: cover;
+    transform: rotate(4deg);
   }
 }
 
@@ -91,7 +92,7 @@ h1 {
 
 .box {
   width: 666px;
-  height: 100px;
+  height: 80px;
   background: $bg-color;
   border-radius: 15px;
   display: flex;
@@ -100,19 +101,37 @@ h1 {
   border: 2px solid $bg-color;
   position: relative;
   min-width: 252px;
-  margin-bottom: 5px;
 }
 
 .inner-box {
   width: calc(0.5 * min(666px, 40vw));
   height: 110%;
-  background: $text-grey;
+  background: darken($text-grey, 5%);
   border-radius: 25px;
   display: flex;
   align-items: center;
   justify-content: center;
   min-width: 110px;
-  margin-left: -3px;
+  // margin-left: -3px;
+  position: relative;
+  padding: 5px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 3px;
+    bottom: 3px;
+    background: $text-grey;
+
+    border-radius: 20px; /* Трішки менший радіус, щоб створити ефект заглиблення */ /* Робимо колір на 12% темнішим */
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
 }
 
 h2 {
@@ -134,12 +153,12 @@ p {
 @media (max-width: 1024px) {
   .box {
     width: 90%;
-    height: 80px;
+    height: 70px;
   }
 
   .inner-box {
     width: 40%;
-    height: 120%;
+    height: 110%;
   }
 
   p {
@@ -155,23 +174,27 @@ p {
 @media (max-width: 768px) {
   .hero-section {
     margin-top: 0;
+    height: 50vh;
   }
   .image-container {
     position: absolute;
-    right: -45%;
-    top: 20%;
+    right: -25%;
+    top: 15%;
     width: 30%;
     height: 60%;
     display: flex;
     justify-content: flex-end;
+    img {
+      height: 330px;
+    }
   }
   .box {
     width: 100%;
-    height: 70px;
+    height: 60px;
   }
 
   .inner-box {
-    width: 35%;
+    width: 40%;
     height: 120%;
     border-radius: 15px;
   }
@@ -187,22 +210,41 @@ p {
 }
 @media (max-width: 400px) {
   .image-container {
-    right: -50%;
+    img {
+      height: 300px;
+    }
+  }
+  .bottom-container {
+    top: 55%;
+  }
+}
+@media (max-width: 378px) {
+  .bottom-container {
+    top: 65%;
   }
 }
 @media (max-width: 480px) {
+  h1 {
+    left: 5%;
+    top: 15%;
+  }
   .bottom-container {
-    left: 10%;
+    width: 75%;
+    left: 3%;
+    gap: 8px;
   }
 
   .box {
     width: 95%;
-    height: 60px;
+    height: 40px;
   }
 
   .inner-box {
-    width: 30%;
+    width: 40%;
     height: 110%;
+    &::before {
+      border-radius: 15px;
+    }
   }
 
   p {

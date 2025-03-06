@@ -78,6 +78,7 @@ h2 {
   font-family: 'Gilroy-reg';
   color: white;
   font-size: clamp(16px, 2vw, 24px);
+  line-height: 1.08;
 }
 .yellow {
   font-family: 'Gilroy-Bold';
@@ -152,6 +153,9 @@ h2 {
 
   .final-box img {
     right: -5.5%;
+  }
+  .boxes-container {
+    gap: 24px;
   }
 }
 </style>

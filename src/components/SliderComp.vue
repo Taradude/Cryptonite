@@ -22,11 +22,6 @@
           <img :src="image" alt="Slide Image" class="slide-image" />
         </div>
       </Slide>
-
-      <!-- <template #addons>
-        <Navigation />
-        <Pagination />
-      </template> -->
     </Carousel>
 
     <div class="button-wrap">
@@ -36,8 +31,7 @@
       </div>
       <button class="glow-button">ЗАБРАТИ БОНУС</button>
       <div class="access-count">
-        <p v-if="accessesLeft > 0">Залишилося {{ accessesLeft }}/100 доступів</p>
-        <p v-else>🔥 Усі бонуси розібрані! 🔥 <br />Повертайся за 24 години.</p>
+        <p>Залишилося {{ accessesLeft }}/100 доступів</p>
       </div>
     </div>
   </div>
@@ -47,42 +41,42 @@
 import { ref, onMounted } from 'vue'
 import 'vue3-carousel/dist/carousel.css'
 import { Carousel, Slide } from 'vue3-carousel'
-
 import sll from '@/assets/img/sll.png'
 import slc from '@/assets/img/slc.png'
 import slr from '@/assets/img/slr.png'
 
-const accessesLeft = ref(99)
-
-const loadAccesses = () => {
-  const savedAccesses = localStorage.getItem('accessesLeft')
-  accessesLeft.value = savedAccesses ? parseInt(savedAccesses, 10) : 99
-}
-
-const decreaseAccesses = () => {
-  if (accessesLeft.value > 0) {
-    const decrement = Math.floor(Math.random() * 4) + 1 // Випадкове зменшення на 1-3
-    accessesLeft.value = Math.max(0, accessesLeft.value - decrement)
-    localStorage.setItem('accessesLeft', accessesLeft.value)
-  }
-}
-
-onMounted(() => {
-  loadAccesses()
-  setInterval(decreaseAccesses, 30 * 60 * 1000) // Раз на 30 хв
-})
-
 const images = [sll, slc, slr]
 const carouselConfig = {
-  itemsToShow: 1.4,
+  itemsToShow: 1.3,
   wrapAround: true,
   autoplay: 5000,
   transition: 1000,
 }
 
-const formattedTime = ref('')
+const accessesLeft = ref(35)
 const countdown = ref(0)
+const formattedTime = ref('')
 
+// Завантаження збережених даних
+const loadData = () => {
+  const savedAccesses = localStorage.getItem('accessesLeft')
+  accessesLeft.value = savedAccesses ? parseInt(savedAccesses, 10) : 35
+
+  const lastReset = localStorage.getItem('bonusResetTime')
+  const now = Date.now()
+
+  if (!lastReset || now - lastReset >= 24 * 60 * 60 * 1000) {
+    localStorage.setItem('bonusResetTime', now)
+    countdown.value = 24 * 60 * 60
+    accessesLeft.value = 35 // Скидаємо до початкового значення
+    localStorage.setItem('accessesLeft', 35)
+  } else {
+    countdown.value = Math.floor((24 * 60 * 60 * 1000 - (now - lastReset)) / 1000)
+    decreaseAccesses() // Одразу коригуємо кількість доступів при завантаженні
+  }
+}
+
+// Оновлення таймера
 const updateTimer = () => {
   const hours = String(Math.floor(countdown.value / 3600)).padStart(2, '0')
   const minutes = String(Math.floor((countdown.value % 3600) / 60)).padStart(2, '0')
@@ -90,33 +84,28 @@ const updateTimer = () => {
   formattedTime.value = `${hours}:${minutes}:${seconds}`
 }
 
-const startTimer = () => {
-  const lastReset = localStorage.getItem('bonusResetTime')
-  const now = Date.now()
-
-  if (!lastReset || now - lastReset >= 24 * 60 * 60 * 1000) {
-    localStorage.setItem('bonusResetTime', now)
-    countdown.value = 24 * 60 * 60
-  } else {
-    countdown.value = Math.floor((24 * 60 * 60 * 1000 - (now - lastReset)) / 1000)
+// Зменшення доступів (не менше 2)
+const decreaseAccesses = () => {
+  if (accessesLeft.value > 2) {
+    const elapsedHours = 24 - Math.floor(countdown.value / 3600)
+    const newAccesses = Math.max(2, 35 - elapsedHours) // Логічне зменшення
+    accessesLeft.value = newAccesses
+    localStorage.setItem('accessesLeft', newAccesses)
   }
+}
 
+// Запуск таймера
+const startTimer = () => {
   setInterval(() => {
     if (countdown.value > 0) {
       countdown.value--
-      updateTimer()
-    } else {
-      // ОНОВЛЮЄМО ДОСТУПИ КОЛИ ТАЙМЕР ОБНУЛИВСЯ
-      localStorage.setItem('bonusResetTime', Date.now())
-      countdown.value = 24 * 60 * 60
-      accessesLeft.value = 99 // Скидаємо доступи до початкового значення
-      localStorage.setItem('accessesLeft', 99) // Зберігаємо в локальному сховищі
       updateTimer()
     }
   }, 1000)
 }
 
 onMounted(() => {
+  loadData()
   startTimer()
   updateTimer()
 })
@@ -126,14 +115,17 @@ onMounted(() => {
 h1 {
   font-family: 'Gilroy-H';
   color: $text-grey;
-  font-size: clamp(16px, 4vw, 50px);
+  font-size: clamp(19px, 5vw, 50px); /* Більше vw для гнучкості */
   text-align: center;
-  line-height: normal;
+  line-height: 1.1; /* Зменшена висота рядка для щільного тексту */
   letter-spacing: 0.5px;
+  white-space: nowrap; /* Заборона перенесення */
 
-  .yellow {
-    color: $yellow;
-  }
+  max-width: 100%; /* Обмеження по ширині контейнера */
+}
+
+.yellow {
+  color: $yellow;
 }
 .access-count {
   p {
@@ -147,7 +139,7 @@ h1 {
   font-family: 'Gilroy-Reg';
   color: $text-grey;
   text-align: center;
-  line-height: normal;
+  line-height: 0.92;
 }
 .carousel-wrapper {
   width: 100%;
@@ -186,14 +178,14 @@ h1 {
   }
 }
 .slide-image {
-  width: 40vw; /* 40% ширини екрану */
-  height: 40vh; /* 40% висоти екрану */
+  width: 50vw; /* 40% ширини екрану */
+  height: 55vh; /* 40% висоти екрану */
   object-fit: contain; /* Зберігає пропорції */
   border-radius: 10px;
 }
 
 .carousel__slide {
-  opacity: 0.5;
+  opacity: 0.8;
   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   transform: scale(0.9);
 }
@@ -207,22 +199,14 @@ h1 {
   // height: 70px;
   margin-top: 25px;
   margin-bottom: 10px;
+  font-size: clamp(32px, 5vw, 75px);
+  padding: 20px 30px;
   border: none;
-  outline: none;
-  font-family: 'Gilroy-H';
-  cursor: pointer;
-  color: $bg-component;
+  color: $black;
+  white-space: nowrap;
+  font-family: 'Gilroy-EBold';
   background: $text-grey;
-  position: relative;
-  font-size: clamp(28px, 4vw, 60px);
-  font-weight: bold;
   border-radius: 50px;
-  padding: 25px 40px;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
 }
 
 // .glow-button::before {
@@ -281,15 +265,15 @@ h1 {
     max-width: 100%;
   }
   .slide-image {
-    width: 60vw; /* Збільшуємо розмір фото на мобільних */
+    width: 70vw; /* Збільшуємо розмір фото на мобільних */
     height: 30vh;
   }
 }
 
 @media (max-width: 480px) {
   .slide-image {
-    width: 80vw;
-    height: 25vh;
+    width: 90vw;
+    // height: 25vh;
   }
 }
 </style>

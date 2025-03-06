@@ -56,7 +56,7 @@ h1 {
   color: $text-grey;
   font-family: 'Gilroy-Bold';
   text-align: center;
-  margin: 50px 10px;
+  margin: 40px 10px;
   font-size: clamp(26px, 4vw, 50px);
 }
 .container {
@@ -102,7 +102,7 @@ h2 {
   color: $black;
   font-family: 'Gilroy-H';
   line-height: normal;
-  font-size: clamp(16px, 2.2vw, 28px);
+  font-size: clamp(18px, 2.2vw, 28px);
 }
 
 p {
@@ -110,8 +110,8 @@ p {
   font-size: 1rem;
   color: $black;
   font-family: 'Gilroy-reg';
-  font-size: clamp(16px, 2.2vw, 28px);
-  line-height: normal;
+  font-size: clamp(13px, 2.2vw, 28px);
+  line-height: 0.99;
 }
 @media (max-width: 1000px) {
   .container {
@@ -121,9 +121,9 @@ p {
   .for-whom {
     margin-bottom: 0;
   }
-  .container + .container + .container + .container {
-    height: 130px !important;
-  }
+  // .container + .container + .container + .container {
+  //   height: 130px !important;
+  // }
 }
 
 @media (max-width: 768px) {

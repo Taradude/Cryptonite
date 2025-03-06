@@ -4,6 +4,12 @@
 
 <style lang="scss">
 @import '@/styles/fonts.scss';
+p,
+h1,
+h2,
+span {
+  line-height: normal;
+}
 
 * {
   box-sizing: border-box;

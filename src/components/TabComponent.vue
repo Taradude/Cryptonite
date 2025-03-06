@@ -8,7 +8,7 @@
             <th class="left-align">Причина</th>
             <th>Класичний трейдинг</th>
             <th>Класичне інвестування</th>
-            <th>Система <span class="small">"Без Зусиль"</span></th>
+            <th>Система "Без Зусиль"</th>
           </tr>
         </thead>
         <tbody>
@@ -99,7 +99,7 @@ table {
 
 thead {
   background-color: $yellow;
-  height: 70px;
+  height: 50px;
   color: $black;
 }
 
@@ -108,8 +108,9 @@ thead th {
   border-bottom: $table-border;
   text-align: center;
   font-family: 'Gilroy-Ultralight';
-  font-size: clamp(14px, 2vw, 32px) !important;
+  font-size: clamp(10px, 2vw, 32px) !important;
   border-right: 1px solid black;
+  border-bottom: none;
 }
 
 thead th:last-child {
@@ -120,7 +121,9 @@ thead th:first-child {
 }
 td {
   padding: 12px;
-  border-bottom: $table-border;
+  // border-bottom: 0.7px $table-border;
+  border-bottom: 0.1px solid rgba(221, 221, 221, 0.6); /* Тонка лінія */
+
   vertical-align: middle;
   word-wrap: break-word;
 }
@@ -128,13 +131,13 @@ td {
 .left-align {
   text-align: left;
   min-width: 120px;
-  font-size: clamp(14px, 2vw, 28px);
+  font-size: clamp(12px, 2vw, 28px);
 }
 
 /* "+" і "-" виділені */
 .plus,
 .minus {
-  font-size: clamp(36px, 1.6vw, 60px);
+  font-size: clamp(24px, 3vw, 52px);
 }
 .plus {
   color: $yellow;

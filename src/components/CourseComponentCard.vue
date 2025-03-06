@@ -1,137 +1,139 @@
 <template>
   <h1>ПРОГРАМА МІНІКУРСУ</h1>
-  <div class="container">
-    <!-- Верхній блок з текстом -->
-    <div class="top-section">
-      <div class="yellow-box">
-        <p class="text-content">УРОК 1</p>
+  <div class="lessons-container">
+    <div class="container">
+      <!-- Верхній блок з текстом -->
+      <div class="top-section">
+        <div class="yellow-box">
+          <p class="text-content">УРОК 1</p>
+        </div>
+        <p class="bottom-text">
+          Система Без Зусиль: що це і як вона допоможе тобі досягти успіху на крипторинку. Вступний урок.
+        </p>
       </div>
-      <p class="bottom-text">
-        Система Без Зусиль: що це і як вона допоможе тобі досягти успіху на крипторинку. Вступний урок.
-      </p>
-    </div>
 
-    <!-- Блок з двома фото -->
-    <div class="image-section">
-      <div class="left-image">
-        <img src="@/assets/img/l_main.png" alt="Left Image" />
-      </div>
-      <div class="right-image">
-        <img src="@/assets/img/l1.png" alt="Right Image" />
+      <!-- Блок з двома фото -->
+      <div class="image-section">
+        <div class="left-image">
+          <img src="@/assets/img/l_main.png" alt="Left Image" />
+        </div>
+        <div class="right-image">
+          <img src="@/assets/img/l1.png" alt="Right Image" />
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <!-- Верхній блок з текстом -->
-    <div class="top-section">
-      <div class="yellow-box">
-        <p class="text-content">УРОК 2</p>
+    <div class="container">
+      <!-- Верхній блок з текстом -->
+      <div class="top-section">
+        <div class="yellow-box">
+          <p class="text-content">УРОК 2</p>
+        </div>
+        <p class="bottom-text">Трейдинг та інвестиції: як усе влаштовано? Вся правда про ринок!</p>
       </div>
-      <p class="bottom-text">Трейдинг та інвестиції: як усе влаштовано? Вся правда про ринок!</p>
-    </div>
 
-    <!-- Блок з двома фото -->
-    <div class="image-section">
-      <div class="left-image">
-        <img src="@/assets/img/l_main.png" alt="Left Image" />
-      </div>
-      <div class="right-image">
-        <img src="@/assets/img/l2.png" alt="Right Image" />
+      <!-- Блок з двома фото -->
+      <div class="image-section">
+        <div class="left-image">
+          <img src="@/assets/img/l_main.png" alt="Left Image" />
+        </div>
+        <div class="right-image">
+          <img src="@/assets/img/l2.png" alt="Right Image" />
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <!-- Верхній блок з текстом -->
-    <div class="top-section">
-      <div class="yellow-box">
-        <p class="text-content">УРОК 3</p>
+    <div class="container">
+      <!-- Верхній блок з текстом -->
+      <div class="top-section">
+        <div class="yellow-box">
+          <p class="text-content">УРОК 3</p>
+        </div>
+        <p class="bottom-text">Цикли ринку: коли купувати, коли продавати і як не втрачати гроші</p>
       </div>
-      <p class="bottom-text">Цикли ринку: коли купувати, коли продавати і як не втрачати гроші</p>
-    </div>
 
-    <!-- Блок з двома фото -->
-    <div class="image-section">
-      <div class="left-image">
-        <img src="@/assets/img/l_main.png" alt="Left Image" />
-      </div>
-      <div class="right-image">
-        <img src="@/assets/img/l3.png" alt="Right Image" />
+      <!-- Блок з двома фото -->
+      <div class="image-section">
+        <div class="left-image">
+          <img src="@/assets/img/l_main.png" alt="Left Image" />
+        </div>
+        <div class="right-image">
+          <img src="@/assets/img/l3.png" alt="Right Image" />
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <!-- Верхній блок з текстом -->
-    <div class="top-section">
-      <div class="yellow-box">
-        <p class="text-content">УРОК 4</p>
+    <div class="container">
+      <!-- Верхній блок з текстом -->
+      <div class="top-section">
+        <div class="yellow-box">
+          <p class="text-content">УРОК 4</p>
+        </div>
+        <p class="bottom-text">Формула зростання капіталу: як складний відсоток створює багатство</p>
       </div>
-      <p class="bottom-text">Формула зростання капіталу: як складний відсоток створює багатство</p>
-    </div>
 
-    <!-- Блок з двома фото -->
-    <div class="image-section">
-      <div class="left-image">
-        <img src="@/assets/img/l_main.png" alt="Left Image" />
-      </div>
-      <div class="right-image">
-        <img src="@/assets/img/l4.png" alt="Right Image" />
+      <!-- Блок з двома фото -->
+      <div class="image-section">
+        <div class="left-image">
+          <img src="@/assets/img/l_main.png" alt="Left Image" />
+        </div>
+        <div class="right-image">
+          <img src="@/assets/img/l4.png" alt="Right Image" />
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <!-- Верхній блок з текстом -->
-    <div class="top-section">
-      <div class="yellow-box">
-        <p class="text-content">УРОК 5</p>
+    <div class="container">
+      <!-- Верхній блок з текстом -->
+      <div class="top-section">
+        <div class="yellow-box">
+          <p class="text-content">УРОК 5</p>
+        </div>
+        <p class="bottom-text">Розумний крипто-портфель: як збалансувати ризики та прибуток</p>
       </div>
-      <p class="bottom-text">Розумний крипто-портфель: як збалансувати ризики та прибуток</p>
-    </div>
 
-    <!-- Блок з двома фото -->
-    <div class="image-section">
-      <div class="left-image">
-        <img src="@/assets/img/l_main.png" alt="Left Image" />
-      </div>
-      <div class="right-image">
-        <img src="@/assets/img/l5.png" alt="Right Image" />
+      <!-- Блок з двома фото -->
+      <div class="image-section">
+        <div class="left-image">
+          <img src="@/assets/img/l_main.png" alt="Left Image" />
+        </div>
+        <div class="right-image">
+          <img src="@/assets/img/l5.png" alt="Right Image" />
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <!-- Верхній блок з текстом -->
-    <div class="top-section">
-      <div class="yellow-box">
-        <p class="text-content">УРОК 6</p>
+    <div class="container">
+      <!-- Верхній блок з текстом -->
+      <div class="top-section">
+        <div class="yellow-box">
+          <p class="text-content">УРОК 6</p>
+        </div>
+        <p class="bottom-text">Як читати ринок за допомогою індикаторів: точка входу та виходу</p>
       </div>
-      <p class="bottom-text">Як читати ринок за допомогою індикаторів: точка входу та виходу</p>
-    </div>
 
-    <!-- Блок з двома фото -->
-    <div class="image-section">
-      <div class="left-image">
-        <img src="@/assets/img/l_main.png" alt="Left Image" />
-      </div>
-      <div class="right-image">
-        <img src="@/assets/img/l6.png" alt="Right Image" />
+      <!-- Блок з двома фото -->
+      <div class="image-section">
+        <div class="left-image">
+          <img src="@/assets/img/l_main.png" alt="Left Image" />
+        </div>
+        <div class="right-image">
+          <img src="@/assets/img/l6.png" alt="Right Image" />
+        </div>
       </div>
     </div>
-  </div>
-  <div class="container">
-    <!-- Верхній блок з текстом -->
-    <div class="top-section">
-      <div class="yellow-box">
-        <p class="text-content">БОНУС</p>
+    <div class="container last">
+      <!-- Верхній блок з текстом -->
+      <div class="top-section">
+        <div class="yellow-box">
+          <p class="text-content">УРОК 7</p>
+        </div>
+        <p class="bottom-text">Як читати ринок за допомогою індикаторів: точка входу та виходу</p>
       </div>
-      <p class="bottom-text">Як читати ринок за допомогою індикаторів: точка входу та виходу</p>
-    </div>
 
-    <!-- Блок з двома фото -->
-    <div class="image-section">
-      <div class="left-image">
-        <img src="@/assets/img/l_main.png" alt="Left Image" />
-      </div>
-      <div class="right-image">
-        <img src="@/assets/img/bonus.png" alt="Right Image" />
+      <!-- Блок з двома фото -->
+      <div class="image-section">
+        <div class="left-image">
+          <img src="@/assets/img/l_main.png" alt="Left Image" />
+        </div>
+        <div class="right-image">
+          <img src="@/assets/img/bonus.png" alt="Right Image" />
+        </div>
       </div>
     </div>
   </div>
@@ -200,7 +202,7 @@ h1 {
   color: $text-grey;
   font-family: 'Gilroy-Bold';
   text-align: center;
-  margin: 50px 0;
+  margin: 40px 0;
   @include text-style($h1-size, 700);
 }
 .container {
@@ -215,7 +217,9 @@ h1 {
   border-radius: 15px;
   background-color: $bg-component;
 }
-
+.last {
+  margin-bottom: 50px;
+}
 .top-section {
   display: flex;
   flex-direction: column;
@@ -251,10 +255,13 @@ h1 {
   font-weight: 100;
   font-family: 'Gilroy-reg';
   font-style: normal;
-  font-size: $h2-size;
   line-height: normal;
+  font-size: clamp(14px, 3vw, 32px);
+  line-height: 1.08;
 }
-
+.lessons-container {
+  margin-bottom: 25px;
+}
 .image-section {
   display: flex;
   width: 100%; /* Забезпечує, що зображення займають всю ширину */
@@ -302,7 +309,7 @@ h1 {
   .container {
     width: 90%;
     padding: 12px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     gap: 0;
   }
   .left-image img {

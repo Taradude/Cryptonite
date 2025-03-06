@@ -11,7 +11,7 @@
       </h2>
       <h1 class="sub-title highlighted-text">"БЕЗ ЗУСИЛЬ”</h1>
       <h2 class="profit-text">
-        Яка допомогла мені заробити <span class="highlight-profit">$400 000</span> <br />за 1.5 роки
+        Яка допомогла мені заробити <span class="highlight-profit"><br />$400 000</span> за 1,5 роки
       </h2>
     </div>
     <div class="content">
@@ -33,7 +33,7 @@
       </div>
     </div>
     <transition name="fade">
-      <div v-if="showFloatingButton" class="floating-div" @click="scrollToMainButton">
+      <div v-if="showFloatingButton" class="floating-div">
         <p>Приєднатися</p>
       </div>
     </transition>
@@ -83,9 +83,7 @@ export default {
       const rect = mainButton.getBoundingClientRect()
       this.showFloatingButton = rect.bottom < 0 // Кнопка зникла з екрану
     },
-    scrollToMainButton() {
-      this.$refs.headImg.scrollIntoView({ behavior: 'smooth' })
-    },
+
     checkMobile() {
       this.isMobile = window.innerWidth <= 768
     },
@@ -110,34 +108,26 @@ export default {
   border: none;
   color: $black;
   white-space: nowrap;
-  font-family: 'Gilroy-EBold';
+  font-family: 'Gilroy-Bold';
   background: $text-grey;
   border-radius: 50px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Статичне світіння */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Статичне світіння */
   cursor: pointer;
   animation: heartbeat-shadow 2s ease-in-out infinite; /* Анімація пульсації */
 }
 
 @keyframes heartbeat-shadow {
   0% {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(169, 169, 169, 0.2),
-      0 0 35px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(169, 169, 169, 0.2),
+      0 0 20px rgba(255, 255, 255, 0.1);
   }
-  // 25% {
-  //   box-shadow: 0 0 25px rgba(255, 255, 255, 0.6), 0 0 35px rgba(169, 169, 169, 0.3),
-  //     0 0 45px rgba(255, 255, 255, 0.2);
-  // }
   50% {
-    box-shadow: 0 0 35px rgba(255, 255, 255, 0.8), 0 0 45px rgba(169, 169, 169, 0.4),
-      0 0 55px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6), 0 0 25px rgba(169, 169, 169, 0.3),
+      0 0 30px rgba(255, 255, 255, 0.2);
   }
-  // 75% {
-  //   box-shadow: 0 0 25px rgba(255, 255, 255, 0.6), 0 0 35px rgba(169, 169, 169, 0.3),
-  //     0 0 45px rgba(255, 255, 255, 0.2);
-  // }
   100% {
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 25px rgba(169, 169, 169, 0.2),
-      0 0 35px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 15px rgba(169, 169, 169, 0.2),
+      0 0 20px rgba(255, 255, 255, 0.1);
   }
 }
 
@@ -147,20 +137,17 @@ export default {
   left: 50%;
   transform: translateX(-50%);
   z-index: 999;
-  font-size: clamp(24px, 5vw, 75px);
-  padding: clamp(12px, 3vw, 16px);
+  font-size: clamp(32px, 5vw, 75px);
+  padding: 20px 50px;
   border: none;
+  color: $black;
   white-space: nowrap;
-  font-family: 'Gilroy-Bold';
-  color: $bg-component;
-  background-color: $text-grey;
-  font-size: clamp(28px, 4vw, 60px);
-  font-weight: bold;
+  font-family: 'Gilroy-EBold';
+  background: $text-grey;
   border-radius: 50px;
-  padding: 25px 40px;
   cursor: pointer;
-  box-shadow: 0 0 25px rgba(216, 216, 216, 0.6); /* Статичне світіння */
-  animation: glowing-shadow 2s ease-in-out infinite; /* Анімація для світіння */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  animation: heartbeat-shadow 2s ease-in-out infinite;
 }
 
 @keyframes glowing-shadow {
@@ -252,15 +239,16 @@ export default {
     font-family: 'Gilroy-UltraLight';
     color: $text-grey;
     font-size: clamp(13px, 1.8vw, 28px);
+    line-height: 1.21;
   }
 }
 
 .old-price {
   text-decoration: line-through;
   text-decoration-color: $yellow; /* Окремо задаємо колір */
-  text-decoration-thickness: 2px;
-  font-family: 'Gilroy-reg';
-  font-size: clamp(24px, 3vw, 50px);
+  text-decoration-thickness: 1.5px;
+  font-family: 'M-R';
+  font-size: clamp(22px, 3vw, 50px);
   color: white;
   text-align: right;
 }
@@ -284,7 +272,7 @@ export default {
 // }
 .current-price {
   font-size: clamp(36px, 6vw, 110px);
-  font-family: 'Gilroy-Bold';
+  font-family: 'M-B';
   color: $text-grey;
   text-align: right;
 }
@@ -314,6 +302,7 @@ export default {
   font-size: clamp(18px, 4vw, 42px);
   color: white;
   font-family: 'Gilroy-UltraLight';
+  line-height: 1.08;
 }
 .highlight-profit {
   color: $yellow;
@@ -392,8 +381,8 @@ p {
   }
 }
 @media (max-width: 768px) {
-  .sub-title {
-    margin-bottom: 5px;
+  .profit-text {
+    margin-top: 5px;
   }
   // .main-btn {
   //   left: 40%;
@@ -414,9 +403,9 @@ p {
   .left {
     align-items: center;
   }
-  // .old-price,
-  // .current-price {
-  //   text-align: center;
-  // }
+  .old-price {
+    position: relative;
+    top: 7px;
+  }
 }
 </style>

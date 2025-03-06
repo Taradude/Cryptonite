@@ -83,8 +83,9 @@ const boxes = [
 h1 {
   font-family: 'Gilroy-Bold';
   color: $text-grey;
-  font-size: clamp(20px, 4vw, 50px);
-  margin: 15px 0;
+  font-size: clamp(28px, 5vw, 70px);
+  margin: 10px 0;
+  margin-top: 35px;
 }
 .contact {
   height: 150px;
@@ -108,7 +109,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 20px auto;
+  // margin: 20px auto;
   max-width: 900px;
   gap: 36px;
 }
@@ -169,6 +170,9 @@ p {
   }
   .box-text {
     max-width: 90%;
+  }
+  .boxes-container {
+    gap: 24px;
   }
   // .box-image {
   //   position: static;

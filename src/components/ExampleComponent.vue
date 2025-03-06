@@ -11,7 +11,11 @@
       І в той же час я бачив, як люди з системним підходом та з малим капіталом з часом почали заробляти
       десятки тисяч доларів.
     </p>
-    <img src="@/assets/img/ex2.png" alt="Друге адаптивне зображення" />
+    <div class="img-box">
+      <img src="@/assets/img/ex2.png" alt="Друге адаптивне зображення" />
+      <img src="@/assets/img/ex3.png" alt="Друге адаптивне зображення" />
+      <img src="@/assets/img/ex4.png" alt="Друге адаптивне зображення" />
+    </div>
     <p>
       Система 'Без Зусиль' має саме такий підхід – дати можливість навчитися заробляти навіть із мінімальним
       стартовим капіталом, використовуючи перевірені стратегії та чіткі правила купівлі-продажу і вже після
@@ -76,7 +80,15 @@ img {
   height: auto;
   border-radius: 15px;
 }
-
+.img-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  img {
+    max-width: 90%;
+  }
+}
 .inner-box {
   background-color: $yellow;
   padding: 40px 60px;
@@ -98,7 +110,7 @@ img {
     padding: 12px;
     margin-bottom: 20px;
     border-radius: 12px;
-    gap: 0;
+    gap: 10px;
     .inner-box {
       padding: 12px;
       width: 110%;

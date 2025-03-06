@@ -81,7 +81,7 @@
   padding: 24px 12px;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  // gap: 24px;
   align-items: center;
   .b {
     font-family: 'Gilroy-Bold';
@@ -133,23 +133,23 @@
       color: white;
       font-family: 'Gilroy-reg';
       font-size: clamp(14px, 2.2vw, 28px);
-      line-height: normal;
+      line-height: 1.08;
     }
 
     .arrow-down {
       position: absolute;
       top: 70%; /* Центрування по вертикалі */
-      width: 25%;
+      width: 6%;
       object-fit: contain;
 
       &.flip {
-        right: 96%; /* Встановлюємо праворуч від елемента */
+        right: 102%; /* Встановлюємо праворуч від елемента */
         margin-left: 16px; /* Відступ від правого краю */
         // transform: rotate(-45deg); /* Поворот для перевернутого елемента */
       }
 
       &:not(.flip) {
-        left: 96%; /* Встановлюємо ліворуч від елемента */
+        left: 102%; /* Встановлюємо ліворуч від елемента */
         margin-right: 16px; /* Відступ від лівого краю */
         // transform: rotate(45deg); /* Поворот для звичайного елемента */
       }
@@ -158,8 +158,8 @@
 
   @media (max-width: 1000px) {
     .content-wrap {
-      width: 80%;
-      padding: 12px;
+      width: 90%;
+      padding: 4px;
       margin-bottom: 20px;
       gap: 0;
     }
