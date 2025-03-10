@@ -122,7 +122,7 @@ export default {
   border: none;
   color: $black;
   white-space: nowrap;
-  font-family: 'Gilroy-Bold';
+  font-family: 'Gilroy-EBold';
   background: $text-grey;
   border-radius: 50px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Статичне світіння */
@@ -251,7 +251,7 @@ export default {
   min-width: 200px;
   p {
     font-family: 'Gilroy-Reg';
-    color: white;
+    color: $text-grey;
     font-size: clamp(13px, 1.8vw, 28px);
     line-height: 1.21;
   }
@@ -309,7 +309,7 @@ export default {
 }
 
 .sub-title {
-  font-family: 'Gilroy-H';
+  font-family: 'Gilroy-Black';
   color: white;
   font-size: clamp(32px, 4vw, 77px);
   line-height: normal;
@@ -371,6 +371,7 @@ p {
   }
   .text-box {
     min-width: 220px;
+    border-radius: 12px;
   }
 }
 @media (max-width: 420px) {

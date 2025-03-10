@@ -175,7 +175,7 @@ ul {
 
 li {
   font-family: 'Gilroy-Reg';
-  color: white;
+  color: $text-grey;
   font-size: clamp(12px, 3vw, 24px);
   // margin-bottom: 8px;
   line-height: 1.4;
@@ -189,6 +189,7 @@ li {
   li {
     font-family: 'Gilroy-Medium';
     list-style: none;
+    color: white;
   }
 }
 

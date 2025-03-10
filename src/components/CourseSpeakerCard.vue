@@ -124,7 +124,7 @@ h1 {
     left: 3px;
     right: 3px;
     bottom: 3px;
-    background: $text-grey;
+    background: rgb(216, 216, 216);
 
     border-radius: 20px; /* Трішки менший радіус, щоб створити ефект заглиблення */ /* Робимо колір на 12% темнішим */
   }
@@ -176,6 +176,7 @@ p {
   .hero-section {
     margin-top: 0;
     height: 50vh;
+    min-height: 385px;
   }
   .image-container {
     position: absolute;
