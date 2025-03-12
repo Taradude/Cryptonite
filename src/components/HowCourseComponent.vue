@@ -55,7 +55,7 @@ h2 {
   font-family: 'Gilroy-Bold';
   color: $text-grey;
   font-size: clamp(28px, 4vw, 50px);
-  margin: 15px 0;
+  margin: 35px 0px;
 }
 
 .boxes-container {

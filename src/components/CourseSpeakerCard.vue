@@ -54,7 +54,7 @@ h1 {
   left: 25%;
   font-family: 'Gilroy-Bold';
   font-size: clamp(24px, 4vw, 48px);
-  line-height: normal;
+  line-height: 0.99;
 }
 
 .highlight {

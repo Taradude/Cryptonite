@@ -20,7 +20,10 @@
         <p>Публічна оферта</p>
         <p>Політика конфіденційності</p>
       </div>
-      <div class="right"><p>Зв'язатися з командою</p></div>
+      <div class="right">
+        <p>Зв'язатися з командою</p>
+        <p></p>
+      </div>
     </div>
   </div>
 </template>
@@ -90,8 +93,7 @@ h1 {
   font-family: 'Gilroy-Bold';
   color: $text-grey;
   font-size: clamp(28px, 5vw, 70px);
-  margin: 10px 0;
-  margin-top: 35px;
+  margin: 35px 0px;
 }
 .contact {
   height: 120px;
@@ -105,6 +107,8 @@ h1 {
     display: flex;
     flex-direction: column;
     // white-space: nowrap;
+    height: 100%;
+    justify-content: center;
   }
   .left {
     gap: 15px;
@@ -115,7 +119,7 @@ h1 {
   p {
     font-family: 'Gilroy-reg';
     color: white;
-    font-size: clamp(16px, 1.5vw, 24px);
+    font-size: clamp(14px, 1.5vw, 24px);
     margin: 4px 0;
   }
 }

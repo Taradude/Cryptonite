@@ -95,6 +95,7 @@
     font-family: 'Gilroy-Bold';
     color: $text-grey;
     font-size: clamp(22px, 4vw, 50px);
+    margin-top: 35px;
   }
   img {
     width: 25%;

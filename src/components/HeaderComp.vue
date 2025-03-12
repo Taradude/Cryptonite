@@ -34,7 +34,7 @@
     </div>
     <transition name="fade">
       <div v-if="showFloatingButton" class="floating-div">
-        <p>Приєднатися</p>
+        <p>КУПИТИ ЗАРАЗ</p>
       </div>
     </transition>
   </div>

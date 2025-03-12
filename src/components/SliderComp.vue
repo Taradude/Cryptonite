@@ -113,7 +113,7 @@ onMounted(() => {
 
 <style scoped lang="scss">
 h1 {
-  font-family: 'Gilroy-H';
+  font-family: 'Gilroy-Black';
   color: $text-grey;
   font-size: clamp(19px, 4.5vw, 50px); /* Більше vw для гнучкості */
   text-align: center;
@@ -200,7 +200,7 @@ h1 {
   margin-top: 25px;
   margin-bottom: 10px;
   font-size: clamp(32px, 5vw, 75px);
-  padding: 20px 30px;
+  padding: 15px 30px;
   border: none;
   color: $black;
   white-space: nowrap;

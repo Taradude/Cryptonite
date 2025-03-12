@@ -110,7 +110,7 @@ thead th {
   padding: 10px;
   // border-bottom: $table-border;
   text-align: center;
-  font-family: 'Gilroy-Ultralight';
+  font-family: 'Gilroy-Medium';
   font-size: clamp(12px, 2vw, 32px) !important;
   border-right: 1px solid black;
   border-bottom: none;
@@ -125,7 +125,7 @@ thead th:first-child {
 }
 td {
   padding: 12px;
-  border-bottom: $table-border;
+  border-bottom: 1px solid #dddddd8f;
   // border-bottom: 0.1px solid rgba(221, 221, 221, 0.6); /* Тонка лінія */
   // box-shadow: inset 0 -1px 0 rgba(221, 221, 221, 0.6);
 
