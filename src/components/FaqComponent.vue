@@ -94,7 +94,7 @@ h1 {
   margin-top: 35px;
 }
 .contact {
-  height: 80px;
+  height: 120px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -104,12 +104,18 @@ h1 {
   .right {
     display: flex;
     flex-direction: column;
+    // white-space: nowrap;
   }
-
+  .left {
+    gap: 15px;
+  }
+  .right {
+    text-align: right;
+  }
   p {
     font-family: 'Gilroy-reg';
     color: white;
-    font-size: clamp(12px, 1.5vw, 24px);
+    font-size: clamp(16px, 1.5vw, 24px);
     margin: 4px 0;
   }
 }
@@ -137,7 +143,7 @@ h1 {
 .box-text {
   font-family: 'Gilroy-reg';
   color: white;
-  font-size: clamp(13px, 2vw, 24px);
+  font-size: clamp(16px, 2vw, 24px);
   flex: 1;
   max-width: 95%;
 }
@@ -150,7 +156,7 @@ h1 {
   border-radius: 10px;
   font-family: 'Gilroy-EBold';
   color: $black;
-  font-size: clamp(13px, 2vw, 24px);
+  font-size: clamp(16px, 2vw, 24px);
   width: fit-content;
 }
 p {

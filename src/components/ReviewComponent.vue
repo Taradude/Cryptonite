@@ -61,7 +61,7 @@ const nextSlide = () => {
 h1 {
   font-family: 'Gilroy-Bold';
   color: $text-grey;
-  font-size: clamp(20px, 4vw, 50px);
+  font-size: clamp(28px, 4vw, 50px);
 }
 
 .carousel-wrapper {

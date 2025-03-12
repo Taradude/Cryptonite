@@ -138,7 +138,7 @@ h1 {
 h2 {
   color: $bg-color;
   font-size: clamp(28px, 3vw, 60px);
-  font-family: 'Gilroy-H';
+  font-family: 'Gilroy-Black';
   white-space: nowrap; // Забороняє перенос тексту
 }
 
@@ -217,7 +217,7 @@ p {
     }
   }
   .bottom-container {
-    top: 55%;
+    top: 57%;
   }
 }
 @media (max-width: 378px) {

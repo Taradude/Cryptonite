@@ -123,7 +123,7 @@
         <div class="yellow-box">
           <p class="text-content">УРОК 7</p>
         </div>
-        <p class="bottom-text">Як читати ринок за допомогою індикаторів: точка входу та виходу</p>
+        <p class="bottom-text">Як заробляти більше ніж 99% за допомогою cryptonite Prime?</p>
       </div>
 
       <!-- Блок з двома фото -->

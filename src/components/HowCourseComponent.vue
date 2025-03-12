@@ -12,7 +12,7 @@
     <div class="final-box">
       <p class="final-text">Я впевнений в якості мого навчання та системі “Без Зусиль”</p>
       <!-- <br /><br /> -->
-      <p class="centered-word">Але</p>
+      <p class="centered-word">АЛЕ</p>
       <!-- <br /><br /> -->
       <p>
         Якщо після проходження мінікурсу у тебе залишаться сумніви щодо його користі для тебе, я поверну тобі
@@ -54,7 +54,7 @@ h1,
 h2 {
   font-family: 'Gilroy-Bold';
   color: $text-grey;
-  font-size: clamp(20px, 4vw, 50px);
+  font-size: clamp(28px, 4vw, 50px);
   margin: 15px 0;
 }
 
@@ -113,12 +113,13 @@ h2 {
   p {
     max-width: 90%;
     font-size: clamp(16px, 2vw, 24px);
+    line-height: 1.2;
   }
 }
 
 .final-box .centered-word {
   text-align: center;
-  font-size: clamp(22px, 3vw, 36px);
+  font-size: clamp(26px, 3vw, 36px);
   font-family: 'Gilroy-Bold';
   color: white;
   margin: 15px 0;

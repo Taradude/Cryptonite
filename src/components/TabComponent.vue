@@ -8,7 +8,10 @@
             <th class="left-align">Причина</th>
             <th>Класичний трейдинг</th>
             <th>Класичне інвестування</th>
-            <th>Система "Без Зусиль"</th>
+            <th>
+              Система <br />
+              "Без Зусиль"
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -108,13 +111,14 @@ thead th {
   // border-bottom: $table-border;
   text-align: center;
   font-family: 'Gilroy-Ultralight';
-  font-size: clamp(10px, 2vw, 32px) !important;
+  font-size: clamp(12px, 2vw, 32px) !important;
   border-right: 1px solid black;
   border-bottom: none;
 }
 
 thead th:last-child {
   border-right: none;
+  white-space: nowrap;
 }
 thead th:first-child {
   text-align: center;

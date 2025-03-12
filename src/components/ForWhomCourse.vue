@@ -110,13 +110,13 @@ p {
   font-size: 1rem;
   color: $black;
   font-family: 'Gilroy-reg';
-  font-size: clamp(13px, 2.2vw, 28px);
+  font-size: clamp(16px, 2.2vw, 28px);
   line-height: 0.99;
 }
 @media (max-width: 1000px) {
   .container {
-    width: 90%;
-    height: 100px;
+    width: 91%;
+    height: 110px;
   }
   .for-whom {
     margin-bottom: 0;

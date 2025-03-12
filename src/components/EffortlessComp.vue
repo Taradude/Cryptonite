@@ -86,7 +86,7 @@ h1 {
   color: $black;
   margin-bottom: 25px;
   margin-top: 25px;
-  font-size: clamp(22px, 5vw, 66px);
+  font-size: clamp(27px, 5vw, 66px);
   line-height: normal;
   font-family: 'Gilroy-H';
   display: inline-block;
@@ -176,7 +176,7 @@ ul {
 li {
   font-family: 'Gilroy-Reg';
   color: $text-grey;
-  font-size: clamp(12px, 3vw, 24px);
+  font-size: clamp(15px, 3vw, 24px);
   // margin-bottom: 8px;
   line-height: 1.4;
 }
@@ -187,7 +187,6 @@ li {
   border-radius: 15px;
   margin-top: 20px;
   li {
-    font-family: 'Gilroy-Medium';
     list-style: none;
     color: white;
   }
@@ -198,14 +197,14 @@ li {
 }
 
 .text-box li p {
-  font-size: clamp(13px, 3vw, 32px);
+  font-size: clamp(16px, 3vw, 32px);
   margin: 25px 0;
   line-height: normal;
 }
 
 @media (max-width: 1000px) {
   .wrapper {
-    max-width: 90%;
+    max-width: 92%;
   }
   .sections {
     gap: 0;
