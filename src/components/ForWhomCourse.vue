@@ -102,7 +102,7 @@ h2 {
   color: $black;
   font-family: 'Gilroy-H';
   line-height: normal;
-  font-size: clamp(18px, 2.2vw, 28px);
+  font-size: clamp(17px, 2.2vw, 28px);
 }
 
 p {

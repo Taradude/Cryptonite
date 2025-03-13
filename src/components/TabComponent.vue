@@ -132,6 +132,9 @@ td {
   vertical-align: middle;
   word-wrap: break-word;
 }
+tbody tr:last-child td {
+  border-bottom: none;
+}
 // tr {
 //   box-shadow: inset 0 -1px 0 rgba(221, 221, 221, 0.6);
 // }
