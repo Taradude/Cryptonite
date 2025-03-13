@@ -134,6 +134,11 @@ p {
   .container {
     border-radius: 12px;
   }
+  .container {
+    &:last-of-type {
+      height: 120px;
+    }
+  }
   //   // .container {
   //   //   flex-direction: column;
   //   //   height: auto;

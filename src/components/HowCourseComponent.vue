@@ -50,19 +50,25 @@ const boxes = [
   max-width: 88%;
 }
 
-h1,
+h1 {
+  font-family: 'Gilroy-Bold';
+  color: $text-grey;
+  font-size: clamp(28px, 4vw, 50px);
+  margin-top: 60px;
+  line-height: normal;
+}
 h2 {
   font-family: 'Gilroy-Bold';
   color: $text-grey;
   font-size: clamp(28px, 4vw, 50px);
-  margin: 35px 0px;
+  margin: 35px 0;
+  line-height: normal;
 }
-
 .boxes-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 20px auto;
+  margin: 10px auto;
   max-width: 900px;
   gap: 36px;
 }
@@ -97,7 +103,7 @@ h2 {
   height: 60px;
   font-family: 'Gilroy-EBold';
   color: $black;
-  font-size: clamp(16px, 3vw, 32px);
+  font-size: clamp(18px, 3vw, 32px);
 }
 
 .final-box {
@@ -107,6 +113,7 @@ h2 {
   position: relative;
   text-align: left;
   margin: 0 auto;
+  margin-top: 10px;
   max-width: 900px;
   font-family: 'Gilroy-reg';
   color: white;

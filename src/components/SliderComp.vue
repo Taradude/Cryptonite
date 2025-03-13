@@ -10,8 +10,9 @@
     </div>
     <div class="paragraph">
       <p>
-        Індикатори - інструменти (помічники), які допомагають <br />
-        трейдеру-інвестору зрозуміти, коли краще купувати чи <br />продавати криптовалюту
+        Індикатори - інструменти (помічники), які допомагають
+        <span class="hide"><br /></span>трейдеру-інвестору зрозуміти, коли краще купувати чи
+        <span class="hide"><br /></span>продавати криптовалюту
       </p>
     </div>
   </div>
@@ -115,7 +116,7 @@ onMounted(() => {
 h1 {
   font-family: 'Gilroy-Black';
   color: $text-grey;
-  font-size: clamp(19px, 4.5vw, 50px); /* Більше vw для гнучкості */
+  font-size: clamp(18px, 4.5vw, 50px); /* Більше vw для гнучкості */
   text-align: center;
   line-height: 1.1; /* Зменшена висота рядка для щільного тексту */
   letter-spacing: 0.5px;
@@ -129,13 +130,13 @@ h1 {
 }
 .access-count {
   p {
-    font-size: clamp(20px, 3vw, 32px);
+    font-size: clamp(16px, 3vw, 32px);
     font-family: 'Gilroy-Reg';
     color: $text-grey;
   }
 }
 .paragraph p {
-  font-size: clamp(13px, 2vw, 24px);
+  font-size: clamp(16px, 2vw, 24px);
   font-family: 'Gilroy-Reg';
   color: $text-grey;
   text-align: center;
@@ -260,7 +261,9 @@ h1 {
     margin-top: 25px;
     // margin-bottom: 25px;
   }
-
+  .hide {
+    display: none;
+  }
   .slide-container {
     max-width: 100%;
   }

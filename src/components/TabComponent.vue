@@ -110,7 +110,7 @@ thead th {
   padding: 10px;
   // border-bottom: $table-border;
   text-align: center;
-  font-family: 'Gilroy-Medium';
+  font-family: 'Gilroy-Reg';
   font-size: clamp(12px, 2vw, 32px) !important;
   border-right: 1px solid black;
   border-bottom: none;

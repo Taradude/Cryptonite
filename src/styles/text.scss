@@ -1,10 +1,9 @@
 // src/styles/_text.scss
 
 // Міксини для шрифтів
-@mixin text-style($font-size, $font-weight, $line-height: 1.6) {
+@mixin text-style($font-size, $font-weight) {
   font-size: $font-size;
   font-weight: $font-weight;
-  line-height: $line-height;
 }
 
 // Глобальні стилі для тексту

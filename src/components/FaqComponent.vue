@@ -93,7 +93,7 @@ h1 {
   font-family: 'Gilroy-Bold';
   color: $text-grey;
   font-size: clamp(28px, 5vw, 70px);
-  margin: 35px 0px;
+  margin-top: 60px;
 }
 .contact {
   height: 120px;
@@ -109,9 +109,6 @@ h1 {
     // white-space: nowrap;
     height: 100%;
     justify-content: center;
-  }
-  .left {
-    gap: 15px;
   }
   .right {
     text-align: right;

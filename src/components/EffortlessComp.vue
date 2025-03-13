@@ -85,7 +85,7 @@ h1 {
   line-height: normal;
   color: $black;
   margin-bottom: 25px;
-  margin-top: 25px;
+  margin-top: 50px;
   font-size: clamp(24px, 5vw, 66px);
   line-height: normal;
   font-family: 'Gilroy-Black';

@@ -244,19 +244,19 @@ h1 {
   font-weight: 800;
   margin: 0;
   color: $black;
-  font-size: clamp(16px, 3vw, 32px);
+  font-size: clamp(18px, 3vw, 32px);
 }
 
 .bottom-text {
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   font-size: 1rem;
   color: white;
   font-weight: 100;
   font-family: 'Gilroy-reg';
   font-style: normal;
   line-height: normal;
-  font-size: clamp(14px, 3vw, 32px);
+  font-size: clamp(16px, 3vw, 32px);
   line-height: 1.08;
 }
 .lessons-container {

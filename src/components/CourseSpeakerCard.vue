@@ -200,7 +200,9 @@ p {
     height: 120%;
     border-radius: 15px;
   }
-
+  h2 {
+    font-family: 'M-B';
+  }
   p {
     margin-left: 10px;
     font-size: 18px;
