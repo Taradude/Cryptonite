@@ -136,7 +136,7 @@ p {
   }
   .container {
     &:last-of-type {
-      height: 120px;
+      height: 130px;
     }
   }
   //   // .container {

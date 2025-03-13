@@ -201,7 +201,7 @@ p {
     border-radius: 15px;
   }
   h2 {
-    font-family: 'M-B';
+    font-family: 'Gilroy-EBold';
   }
   p {
     margin-left: 10px;

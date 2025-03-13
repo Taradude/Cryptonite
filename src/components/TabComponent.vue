@@ -159,7 +159,7 @@ td {
   thead th,
   td {
     font-size: 14px;
-    padding: 2px;
+    padding: 4px;
   }
 
   .left-align {
