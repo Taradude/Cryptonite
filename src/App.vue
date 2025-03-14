@@ -1,6 +1,13 @@
 <template>
   <router-view />
 </template>
+<script setup>
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  document.title = 'Мінікурс Без Зусиль | Cryptonite'
+})
+</script>
 
 <style lang="scss">
 @import '@/styles/fonts.scss';
