@@ -94,6 +94,7 @@ h1 {
   color: $text-grey;
   font-size: clamp(28px, 5vw, 70px);
   margin-top: 60px;
+  margin-bottom: 10px;
 }
 .contact {
   height: 120px;

@@ -56,7 +56,8 @@ h1 {
   color: $text-grey;
   font-family: 'Gilroy-Bold';
   text-align: center;
-  margin: 35px 0px;
+  margin-top: 60px;
+  margin-bottom: 10px;
   font-size: clamp(26px, 4vw, 50px);
 }
 .container {

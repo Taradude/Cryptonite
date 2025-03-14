@@ -54,14 +54,15 @@ h1 {
   font-family: 'Gilroy-Bold';
   color: $text-grey;
   font-size: clamp(28px, 4vw, 50px);
-  margin-top: 60px;
+  margin-top: 40px;
   line-height: normal;
 }
 h2 {
   font-family: 'Gilroy-Bold';
   color: $text-grey;
   font-size: clamp(28px, 4vw, 50px);
-  margin: 35px 0;
+  margin-top: 60px;
+  margin-bottom: 10px;
   line-height: normal;
 }
 .boxes-container {
@@ -145,6 +146,9 @@ h2 {
     padding: 12px;
     margin-bottom: 20px;
     gap: 0;
+  }
+  h1 {
+    margin-top: 0;
   }
   .box {
     border-radius: 12px;

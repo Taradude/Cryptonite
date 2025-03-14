@@ -76,7 +76,8 @@ h1 {
   color: $text-grey;
   font-family: 'Gilroy-Bold';
   text-align: center;
-  margin: 40px 0;
+  margin-top: 50px;
+  margin-bottom: 10px;
   line-height: normal;
 }
 
