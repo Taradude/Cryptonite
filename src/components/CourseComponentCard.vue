@@ -293,12 +293,9 @@ h1 {
 .right-image img {
   width: 100%;
   height: auto;
-  border-radius: 20px; /* Якщо потрібно зберегти округлені краї */
+  // border-radius: 20px; /* Якщо потрібно зберегти округлені краї */
   object-fit: cover;
-}
-.right-image img {
-  border-top-right-radius: 20px; /* Заокруглення правого фото */
-  border-bottom-right-radius: 20px; /* Заокруглення правого фото */
+  border-radius: 20px;
 }
 
 @media (max-width: 1000px) {
