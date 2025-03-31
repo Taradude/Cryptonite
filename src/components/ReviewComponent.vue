@@ -26,11 +26,16 @@ import 'vue3-carousel/dist/carousel.css'
 import { ref } from 'vue'
 import { Carousel, Slide } from 'vue3-carousel'
 
-import img1 from '@/assets/img/14.png'
-import img2 from '@/assets/img/15.png'
-import img3 from '@/assets/img/16.png'
+import img1 from '@/assets/img/r1.png'
+import img2 from '@/assets/img/r2.png'
+import img3 from '@/assets/img/r3.png'
+import img4 from '@/assets/img/r4.png'
+import img5 from '@/assets/img/r5.png'
+import img6 from '@/assets/img/r6.png'
+import img7 from '@/assets/img/r7.png'
+import img8 from '@/assets/img/r8.png'
 
-const images = [img1, img2, img3]
+const images = [img1, img2, img3, img4, img5, img6, img7, img8]
 const carouselRef = ref(null)
 
 const carouselConfig = {

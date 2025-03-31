@@ -30,7 +30,9 @@
       <div class="timer">
         <h1>{{ formattedTime }}</h1>
       </div>
-      <button class="glow-button">ЗАБРАТИ БОНУС</button>
+      <a href="https://secure.wayforpay.com/button/ba17bd76f2043">
+        <button class="glow-button">ЗАБРАТИ БОНУС</button>
+      </a>
       <div class="access-count">
         <p>Залишилося {{ accessesLeft }}/100 доступів</p>
       </div>
@@ -124,7 +126,10 @@ h1 {
 
   max-width: 99%; /* Обмеження по ширині контейнера */
 }
-
+a,
+button {
+  cursor: pointer;
+}
 .yellow {
   color: $yellow;
 }

@@ -17,7 +17,12 @@ h2,
 span {
   line-height: normal;
 }
-
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -31,6 +36,5 @@ html {
 
 body {
   background-color: $bg-color;
-  // max-width: 1100px;
 }
 </style>

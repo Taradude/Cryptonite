@@ -17,11 +17,20 @@
     </div>
     <div class="contact">
       <div class="left">
-        <p>Публічна оферта</p>
-        <p>Політика конфіденційності</p>
+        <a
+          href="https://docs.google.com/document/d/1KeyJRupFOy66iv_2O9QaZONaI8qhoeTCnfNpMQuR1vY/edit?usp=sharing"
+        >
+          <p>Публічна оферта</p></a
+        >
+        <a
+          href="https://docs.google.com/document/d/1Jtp3IEBmqJR_5S38ivcCCGuCNlydZCj3lrmE_E4cHjA/edit?usp=sharing"
+          ><p>Політика конфіденційності</p></a
+        >
       </div>
       <div class="right">
-        <p>Зв'язатися з командою</p>
+        <a href="https://t.me/sofia_cryptonite">
+          <p>Зв'язатися з командою</p>
+        </a>
         <p></p>
       </div>
     </div>
@@ -92,7 +101,7 @@ const boxes = [
 h1 {
   font-family: 'Gilroy-Bold';
   color: $text-grey;
-  font-size: clamp(28px, 5vw, 70px);
+  font-size: clamp(28px, 5vw, 50px);
   margin-top: 60px;
   margin-bottom: 10px;
 }

@@ -14,11 +14,11 @@
 
       <!-- Блок з двома фото -->
       <div class="image-section">
-        <div class="left-image">
+        <!-- <div class="left-image">
           <img src="@/assets/img/l_main.png" alt="Left Image" />
-        </div>
+        </div> -->
         <div class="right-image">
-          <img src="@/assets/img/l1.png" alt="Right Image" />
+          <img src="@/assets/img/1.png" alt="Right Image" />
         </div>
       </div>
     </div>
@@ -33,11 +33,11 @@
 
       <!-- Блок з двома фото -->
       <div class="image-section">
-        <div class="left-image">
+        <!-- <div class="left-image">
           <img src="@/assets/img/l_main.png" alt="Left Image" />
-        </div>
+        </div> -->
         <div class="right-image">
-          <img src="@/assets/img/l2.png" alt="Right Image" />
+          <img src="@/assets/img/2.png" alt="Right Image" />
         </div>
       </div>
     </div>
@@ -52,11 +52,11 @@
 
       <!-- Блок з двома фото -->
       <div class="image-section">
-        <div class="left-image">
+        <!-- <div class="left-image">
           <img src="@/assets/img/l_main.png" alt="Left Image" />
-        </div>
+        </div> -->
         <div class="right-image">
-          <img src="@/assets/img/l3.png" alt="Right Image" />
+          <img src="@/assets/img/3.png" alt="Right Image" />
         </div>
       </div>
     </div>
@@ -71,11 +71,11 @@
 
       <!-- Блок з двома фото -->
       <div class="image-section">
-        <div class="left-image">
+        <!-- <div class="left-image">
           <img src="@/assets/img/l_main.png" alt="Left Image" />
-        </div>
+        </div> -->
         <div class="right-image">
-          <img src="@/assets/img/l4.png" alt="Right Image" />
+          <img src="@/assets/img/4.png" alt="Right Image" />
         </div>
       </div>
     </div>
@@ -90,11 +90,11 @@
 
       <!-- Блок з двома фото -->
       <div class="image-section">
-        <div class="left-image">
+        <!-- <div class="left-image">
           <img src="@/assets/img/l_main.png" alt="Left Image" />
-        </div>
+        </div> -->
         <div class="right-image">
-          <img src="@/assets/img/l5.png" alt="Right Image" />
+          <img src="@/assets/img/5.png" alt="Right Image" />
         </div>
       </div>
     </div>
@@ -109,11 +109,11 @@
 
       <!-- Блок з двома фото -->
       <div class="image-section">
-        <div class="left-image">
+        <!-- <div class="left-image">
           <img src="@/assets/img/l_main.png" alt="Left Image" />
-        </div>
+        </div> -->
         <div class="right-image">
-          <img src="@/assets/img/l6.png" alt="Right Image" />
+          <img src="@/assets/img/6.png" alt="Right Image" />
         </div>
       </div>
     </div>
@@ -128,11 +128,11 @@
 
       <!-- Блок з двома фото -->
       <div class="image-section">
-        <div class="left-image">
+        <!-- <div class="left-image">
           <img src="@/assets/img/l_main.png" alt="Left Image" />
-        </div>
+        </div> -->
         <div class="right-image">
-          <img src="@/assets/img/bonus.png" alt="Right Image" />
+          <img src="@/assets/img/7.png" alt="Right Image" />
         </div>
       </div>
     </div>
@@ -272,35 +272,30 @@ h1 {
   align-items: stretch; /* Зображення заповнюють висоту */
 }
 
-.left-image,
 .right-image {
   display: flex;
   justify-content: center; /* Вирівнювання по центру */
   align-items: center; /* Вирівнювання по центру */
 }
 
-.left-image {
-  flex: 0 0 30%; /* Ліве зображення займає 30% ширини */
-  padding: 0;
-}
+// .left-image {
+//   flex: 0 0 30%; /* Ліве зображення займає 30% ширини */
+//   padding: 0;
+// }
 
 .right-image {
-  flex: 0 0 70%; /* Праве зображення займає 70% ширини */
-  padding: 0;
+  width: 100%; /* Тепер праве зображення займає всю ширину */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.left-image img,
 .right-image img {
-  width: 100%; /* Зображення займатимуть ширину відповідно до розміру батьківського елемента */
-  height: 100%; /* Висота зображення також змінюється пропорційно */
-  object-fit: cover; /* Заповнює контейнер без спотворення */
+  width: 100%;
+  height: auto;
+  border-radius: 20px; /* Якщо потрібно зберегти округлені краї */
+  object-fit: cover;
 }
-
-.left-image img {
-  border-top-left-radius: 20px; /* Заокруглення лівого фото */
-  border-bottom-left-radius: 20px; /* Заокруглення лівого фото */
-}
-
 .right-image img {
   border-top-right-radius: 20px; /* Заокруглення правого фото */
   border-bottom-right-radius: 20px; /* Заокруглення правого фото */
@@ -313,12 +308,10 @@ h1 {
     margin-bottom: 15px;
     gap: 0;
   }
-  .left-image img {
-    border-top-left-radius: 6px; /* Заокруглення лівого фото */
-    border-bottom-left-radius: 6px; /* Заокруглення лівого фото */
-  }
 
   .right-image img {
+    border-top-left-radius: 2px; /* Заокруглення лівого фото */
+    border-bottom-left-radius: 2px; /* Заокруглення лівого фото */
     border-top-right-radius: 6px; /* Заокруглення правого фото */
     border-bottom-right-radius: 6px; /* Заокруглення правого фото */
   }

@@ -23,19 +23,23 @@
           </p>
         </div>
         <div class="left-bottom">
-          <p class="old-price">6780 грн</p>
+          <p class="old-price">2990 грн</p>
           <p class="current-price">680 грн</p>
         </div>
       </div>
       <div class="right">
-        <img ref="headImg" src="@/assets/img/header.png" alt="Фото" />
-        <button ref="mainButton" class="main-btn">КУПИТИ ЗАРАЗ</button>
+        <img ref="headImg" src="@/assets/img/header1.png" alt="Фото" />
+        <a href="https://secure.wayforpay.com/button/ba17bd76f2043"
+          ><button ref="mainButton" class="main-btn">КУПИТИ ЗАРАЗ</button></a
+        >
       </div>
     </div>
     <transition name="fade">
-      <div v-if="showFloatingButton" class="floating-div">
-        <p>КУПИТИ ЗАРАЗ</p>
-      </div>
+      <a href="https://secure.wayforpay.com/button/ba17bd76f2043">
+        <div v-if="showFloatingButton" class="floating-div">
+          <p>КУПИТИ ЗАРАЗ</p>
+        </div>
+      </a>
     </transition>
   </div>
 </template>
@@ -114,7 +118,7 @@ export default {
 .main-btn {
   position: absolute;
   left: 0;
-  bottom: 5%;
+  bottom: 10%;
   transform: translateX(-50%);
   z-index: 10;
   font-size: clamp(32px, 5vw, 75px);
@@ -228,7 +232,7 @@ export default {
   align-items: flex-start;
 
   // margin-top: 60px;
-  height: 100dvh;
+  height: 90dvh;
   overflow: hidden;
 }
 
@@ -285,7 +289,7 @@ export default {
 //   z-index: 10;
 // }
 .current-price {
-  font-size: clamp(36px, 6vw, 110px);
+  font-size: clamp(36px, 6vw, 92px);
   font-family: 'M-B';
   color: $text-grey;
   text-align: right;
@@ -399,6 +403,11 @@ p {
   // }
   .left {
     padding-left: 10px;
+  }
+}
+@media (max-width: 1250px) {
+  .main-btn {
+    bottom: 15%;
   }
 }
 @media (max-width: 768px) {
