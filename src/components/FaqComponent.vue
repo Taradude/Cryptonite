@@ -138,7 +138,12 @@ h1 {
   max-width: 900px;
   gap: 36px;
 }
-
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline white;
+  }
+}
 .box {
   background: $bg-component;
   padding: 24px 32px;

@@ -269,6 +269,8 @@ export default {
   font-size: clamp(22px, 3vw, 50px);
   color: white;
   text-align: right;
+  position: relative;
+  top: 15px;
 }
 .current-price {
   // position: absolute;
@@ -343,6 +345,14 @@ p {
   line-height: normal;
   color: $black;
   // margin-bottom: 15px;
+}
+@media (max-width: 1600px) {
+  .content {
+    height: 95dvh;
+  }
+  .main-btn {
+    left: 15%;
+  }
 }
 @media (max-width: 768px) {
   // .content {
