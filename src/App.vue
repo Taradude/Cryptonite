@@ -17,50 +17,29 @@ onMounted(() => {
         utm[pair[0]] = decodeURIComponent(pair[1]);
       }
     }
-    return utm;
+    return utm?.utm_source ?? "Нема UTM";
   };
 
-  function saveUTMs() {
-    const utmParams = getUTMParams();
-    if (Object.keys(utmParams).length) {
-      localStorage.setItem('utm_data', JSON.stringify(utmParams.utm_source));
-    } else {
-      localStorage.setItem('utm_data', "Нема UTM");
-    }
-  };
-
-  function initBtn() {
-    const btns = document.querySelectorAll('a[href="https://secure.wayforpay.com/button/ba17bd76f2043"]');
-    btns?.forEach((btn) => {
-      if (btn) {
-        btn.addEventListener('click', function(e) {
-          e.preventDefault();
-          const baseUrl = this.getAttribute('href');
-          
-          const form = document.createElement('form');
-          form.method = 'POST';
-          form.action = baseUrl;
-          form.style.display = 'none';
-          
-          const inputMerchantData = document.createElement('input');
-          inputMerchantData.type = 'hidden';
-          inputMerchantData.name = 'merchantData';
-          inputMerchantData.value = localStorage.getItem('utm_data') ?? "Нема UTM";
-          form.appendChild(inputMerchantData);
-          
-          document.body.appendChild(form);
-          form.submit();
-        });
-      }
-    })
+  const pushDataToServer = async () => {
+    const response = await fetch('https://cryptonite.com.ua/api/post.php', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ 
+        UTM: getUTMParams(),
+      })
+    });
+    const data = await response.json();
+    return data;
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    saveUTMs();
-    initBtn();
+    pushDataToServer();
   });
 
 })
+
 </script>
 
 <style lang="scss">
