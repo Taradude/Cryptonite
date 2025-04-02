@@ -151,6 +151,17 @@ p {
 }
 
 /* АДАПТАЦІЯ */
+@media (max-width: 1600px) {
+  h1 {
+    left: 15%;
+  }
+  .bottom-container {
+    left: 15%;
+  }
+  .box {
+    width: 555px;
+  }
+}
 @media (max-width: 1024px) {
   .box {
     width: 90%;
