@@ -439,6 +439,7 @@ p {
   }
   .main-btn {
     bottom: 8%;
+    left: 0;
   }
   .left {
     align-items: center;
