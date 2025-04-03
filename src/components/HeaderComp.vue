@@ -353,12 +353,18 @@ p {
   .main-btn {
     left: 15%;
   }
+  .promo-container {
+    margin-bottom: 30px;
+  }
 }
 @media (max-width: 768px) {
   // .content {
   //   flex-direction: column;
   //   text-align: center;
   // }
+  .promo-container {
+    margin-bottom: 0;
+  }
   .main-btn {
     transform: translateX(-60%);
   }
