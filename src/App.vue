@@ -22,8 +22,8 @@ onMounted(() => {
     return utmValues.length ? utmValues.join(', ') : "Нема UTM";
   }
 
-
-  const pushDataToServer = async () => {
+  const fetchServer = async () => {
+    const ip = await (await fetch('https://api.ipify.org')).text();
     const response = await fetch('https://cryptonite.com.ua/api/post.php', {
       method: 'POST',
       headers: {
@@ -31,14 +31,14 @@ onMounted(() => {
       },
       body: JSON.stringify({
         UTM: getUTMParams(),
+        IP: ip
       })
     });
     const data = await response.json();
     return data;
   }
 
-  pushDataToServer();
-
+  fetchServer();
 })
 
 </script>
