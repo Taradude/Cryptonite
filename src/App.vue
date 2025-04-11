@@ -8,36 +8,37 @@ onMounted(() => {
   document.title = 'Мінікурс Без Зусиль | Cryptonite';
 
   function getUTMParams() {
-    const utm = {};
     const query = window.location.search.substring(1);
     const vars = query.split('&');
+    const utmValues = [];
+
     for (let i = 0; i < vars.length; i++) {
       const pair = vars[i].split('=');
-      if (pair[0].indexOf('utm_') === 0) {
-        utm[pair[0]] = decodeURIComponent(pair[1]);
+      if (pair[0].startsWith('utm_')) {
+        utmValues.push(decodeURIComponent(pair[1]));
       }
     }
-    return utm?.utm_source ?? "Нема UTM";
-  };
 
-  const pushDataToServer = async () => {
+    return utmValues.length ? utmValues.join(', ') : "Нема UTM";
+  }
+
+  const fetchServer = async () => {
+    const ip = await (await fetch('https://api.ipify.org')).text();
     const response = await fetch('https://cryptonite.com.ua/api/post.php', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ 
+      body: JSON.stringify({
         UTM: getUTMParams(),
+        IP: ip
       })
     });
     const data = await response.json();
     return data;
   }
 
-  document.addEventListener('DOMContentLoaded', () => {
-    pushDataToServer();
-  });
-
+  fetchServer();
 })
 
 </script>
