@@ -28,7 +28,7 @@
         >
       </div>
       <div class="right">
-        <a href="https://t.me/sofia_cryptonite">
+        <a href="https://t.me/max_cryptonite">
           <p>Зв'язатися з командою</p>
         </a>
         <p></p>
