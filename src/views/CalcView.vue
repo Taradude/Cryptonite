@@ -158,7 +158,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .container {
   background-color: #fff;
   max-width: 450px;
