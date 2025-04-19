@@ -1,0 +1,11 @@
+v<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+
+  # Дозволити прямий доступ до існуючих файлів та директорій
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+
+  # Все інше — на index.html (де живе Vue SPA)
+  RewriteRule . /index.html [L]
+</IfModule>

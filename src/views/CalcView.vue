@@ -92,10 +92,10 @@
 export default {
   data() {
     return {
-      deposit: 2000,
-      rate: 100,
-      monthly: 100,
-      term: 7,
+      deposit: 1000,
+      rate: 0,
+      monthly: 0,
+      term: 1,
       currency: '₴',
       showTable: false,
       breakdown: [],
@@ -159,6 +159,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: inherit;
+}
 .container {
   background-color: #fff;
   max-width: 450px;
@@ -170,7 +179,7 @@ h1 {
   font-size: 45px;
   font-weight: 900;
   margin-bottom: 20px;
-  font-family: 'Gilroy-H';
+  font-family: 'Gilroy-Black';
   line-height: 1;
   color: #323232;
 }
@@ -242,6 +251,7 @@ th {
 }
 .result {
   font-family: 'Gilroy-Semibold';
+  margin-top: 25px;
 }
 #result {
   font-size: 44px;
@@ -258,7 +268,7 @@ th {
 .subinfo {
   color: #888;
   font-size: 14px;
-  margin-top: 20px;
+  margin-top: 10px;
   line-height: 1;
 }
 </style>
