@@ -160,10 +160,6 @@ export default {
 
 <style lang="scss" scoped>
 select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: transparent;
   border: none;
   outline: none;
   color: inherit;
